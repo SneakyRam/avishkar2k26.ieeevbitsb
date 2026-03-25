@@ -72,6 +72,7 @@ const timelineEvents = [
 
 const Index = () => {
   const countdown = useCountdown();
+  const carousel = useTestimonialCarousel(testimonials.length);
 
   return (
     <Layout>
@@ -95,14 +96,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Countdown */}
-      <section className="page-container text-center">
-        <h2 className="section-title">Event Commences in :</h2>
-        <div className="flex justify-center gap-4 sm:gap-8">
-          <CountdownUnit value={countdown.days} label="Days" />
-          <CountdownUnit value={countdown.hours} label="Hours" />
-          <CountdownUnit value={countdown.minutes} label="Minutes" />
-          <CountdownUnit value={countdown.seconds} label="Seconds" />
+      {/* Countdown - dark section */}
+      <section className="relative py-16 sm:py-20 overflow-hidden">
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-hero/75" />
+        <div className="relative z-10 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display mb-8 sm:mb-12 text-hero-foreground">Event Commences in :</h2>
+          <div className="flex justify-center gap-6 sm:gap-10">
+            <CountdownUnit value={countdown.days} label="Days" />
+            <CountdownUnit value={countdown.hours} label="Hours" />
+            <CountdownUnit value={countdown.minutes} label="Minutes" />
+            <CountdownUnit value={countdown.seconds} label="Seconds" />
+          </div>
         </div>
       </section>
 
@@ -141,18 +146,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - speech bubble carousel */}
       <section className="page-container">
         <h2 className="section-title">Testimonials</h2>
-        <div className="max-w-2xl mx-auto bg-card rounded-xl p-6 sm:p-8 border border-border shadow-sm">
-          <p className="text-muted-foreground text-sm leading-relaxed italic">
-            "Being a part of Avishkar 2K25 at VBIT was a defining experience in my journey. The event stood as a strong representation of innovation, creativity, and collaboration. What truly set Avishkar apart was not just its scale, but the energy behind it — the seamless coordination, diversity of ideas, and the passion shared by every participant."
-          </p>
-          <div className="mt-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-muted" />
-            <div>
-              <p className="text-sm font-semibold text-foreground">G Ramgopal</p>
-              <p className="text-xs text-muted-foreground">Web Designing</p>
+        <div className="max-w-3xl mx-auto relative">
+          {/* Speech bubble */}
+          <div className="relative rounded-2xl p-6 sm:p-10 mb-8 overflow-hidden" style={{ backgroundColor: "hsl(10 60% 95%)" }}>
+            {/* Triangle */}
+            <div
+              className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-0 h-0"
+              style={{
+                borderLeft: "16px solid transparent",
+                borderRight: "16px solid transparent",
+                borderTop: "16px solid hsl(10 60% 95%)",
+              }}
+            />
+            <div className="relative min-h-[160px] sm:min-h-[120px]">
+              {testimonials.map((t, i) => (
+                <div
+                  key={i}
+                  className={`transition-all duration-500 ease-in-out ${
+                    i === carousel.active
+                      ? "opacity-100 relative"
+                      : "opacity-0 absolute inset-0 pointer-events-none"
+                  }`}
+                >
+                  <p className="text-foreground/80 text-sm sm:text-base leading-relaxed text-center">
+                    {t.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Avatar dots + name */}
+          <div className="flex flex-col items-center gap-3 mt-8">
+            <div className="flex items-center justify-center -space-x-1">
+              {testimonials.map((t, i) => (
+                <button
+                  key={i}
+                  onClick={() => carousel.setActive(i)}
+                  className={`rounded-full bg-muted border-2 flex items-center justify-center text-xs font-bold text-muted-foreground transition-all duration-300 ${
+                    i === carousel.active
+                      ? "w-14 h-14 border-primary scale-110 z-10 ring-2 ring-primary/30"
+                      : "w-10 h-10 border-card hover:scale-105 z-0"
+                  }`}
+                >
+                  {t.name.split(" ").map((n) => n[0]).join("")}
+                </button>
+              ))}
+            </div>
+            <div className="text-center transition-all duration-300">
+              <p className="font-semibold text-foreground">{testimonials[carousel.active].name}</p>
+              <p className="text-sm text-muted-foreground">{testimonials[carousel.active].role}</p>
             </div>
           </div>
         </div>
