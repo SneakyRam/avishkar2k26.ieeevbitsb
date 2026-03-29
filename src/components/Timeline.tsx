@@ -53,11 +53,11 @@ const TimelineNode = ({
         }}
       />
       <motion.div
-        className={`w-5/12 bg-muted rounded-lg px-4 py-3 ${evt.side === "right" ? "ml-auto" : ""}`}
+        className={`w-[45%] sm:w-5/12 bg-[#0A1628] rounded-xl px-4 py-3 sm:py-4 border border-white/10 shadow-[0_10px_30px_-10px_rgba(10,22,40,0.6)] ${evt.side === "right" ? "ml-auto" : ""}`}
         style={{ scale }}
       >
-        <p className="text-xs text-muted-foreground">{evt.date}</p>
-        <p className="text-sm font-semibold text-foreground">{evt.title}</p>
+        <p className="text-xs sm:text-sm font-medium text-cyan-400 mb-1">{evt.date}</p>
+        <p className="text-sm sm:text-base font-bold text-white leading-tight">{evt.title}</p>
       </motion.div>
     </div>
   );

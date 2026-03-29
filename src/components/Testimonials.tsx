@@ -63,7 +63,7 @@ const Testimonials = () => {
         onMouseLeave={() => carousel.setIsHovered(false)}
       >
         {/* Speech bubble */}
-        <div className="relative rounded-xl p-8 sm:p-12 mb-10 shadow-sm" style={{ backgroundColor: "#D8E2FF" }}>
+        <div className="relative rounded-xl p-8 sm:p-12 mb-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0A1628]/40" style={{ backgroundColor: "#D8E2FF" }}>
           {/* Triangle */}
           <div
             className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0"
