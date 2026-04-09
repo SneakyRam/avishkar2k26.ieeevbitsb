@@ -1,13 +1,12 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 import Layout from "@/components/Layout";
 import CountdownTimer from "@/components/CountdownTimer";
-import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
 import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
 import { CursorArrow } from "@/components/ui/cursor-arrow";
+import heroBg from "@/assets/hero-bg_101.jpeg";
 
 
 /* -------------------- Page -------------------- */
@@ -17,8 +16,17 @@ const Index = () => {
   return (
     <Layout>
       {/* Vercel-Tier High-Performance Hero */}
-      <section className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden bg-[#0A1628] border-b border-white/5">
-        
+      <section className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5">
+
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroBg}
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+
         {/* Subtle Tech Corners (Premium Touch) */}
         <div className="absolute top-8 left-8 w-12 h-12 border-t-2 border-l-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
         <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
@@ -35,22 +43,11 @@ const Index = () => {
           <div className="absolute h-full w-[1px] bg-white/40" />
         </div>
 
-        {/* Particle Canvas Layer */}
-        <div className="absolute inset-0 z-0">
-          {/* Subtle aurora glow behind the particles for depth */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-[#0A1628] to-indigo-900/20 blur-3xl opacity-60 pointer-events-none" />
-          
-          <ParticleTextEffect words={["WELCOME TO", "AVISHKAR", "2K26"]} />
-          
-          {/* Bottom mask gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0A1628] to-transparent pointer-events-none z-10" />
-        </div>
-
         {/* Hero Overlay */}
         <div className="relative z-10 flex flex-col items-center justify-between w-full h-[85vh] px-6 pointer-events-none">
-          
-        {/* Top Spacer */}
-        <div className="mt-28 pointer-events-auto" />
+
+          {/* Top Spacer */}
+          <div className="mt-28 pointer-events-auto" />
 
           <h1 className="sr-only">Avishkar 2K26</h1>
 
