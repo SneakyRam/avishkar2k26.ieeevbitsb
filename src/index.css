@@ -54,11 +54,15 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-display);
   }
 }
@@ -67,11 +71,13 @@
   .page-container {
     @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16;
   }
+
   .page-title,
   .section-title {
     @apply flex items-center justify-center gap-4 sm:gap-6 mb-10 sm:mb-14 text-3xl sm:text-5xl font-bold text-black m-0;
     font-family: var(--font-body);
   }
+
   .page-title::before,
   .page-title::after,
   .section-title::before,
@@ -85,9 +91,17 @@
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
+
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Custom Hero Animations */
@@ -96,6 +110,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -103,8 +118,13 @@
   }
 
   @keyframes pureFadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
   }
 
   .animate-fadeUp {
