@@ -7,7 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
 import { CursorArrow } from "@/components/ui/cursor-arrow";
 import heroBg from "@/assets/hero-bg_101.jpeg";
-
+import avkLogo from "@/assets/avk_logo.png";
 
 /* -------------------- Page -------------------- */
 const Index = () => {
@@ -105,10 +105,22 @@ const Index = () => {
 
       {/* About */}
       <section className="page-container px-4 sm:px-6 w-full">
-        <h2 className="section-title text-center text-[28px] sm:text-4xl md:text-5xl leading-tight">About Avishkar</h2>
-        <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center mt-2 sm:mt-6 px-2 flex flex-col items-center">
-          Avishkar, the flagship event of IEEE - VBIT SB, is a Technical Paper Presentation competition held exclusively for the freshmen of VBIT. In the year 2011, Avishkar was awarded the esteemed 'Darrel Chong Gold Student Activity Award'. This year marks the 15th edition of the most vibrant event with a new approach to pave an ideal path for students to enhance their technical cognizance and continue mastery in advanced technologies.
-        </p>
+        <h2 className="section-title text-center text-[28px] sm:text-4xl md:text-5xl leading-tight relative z-10">About Avishkar</h2>
+        
+        {/* Background Watermark for Text Block */}
+        <div className="relative w-full mt-2 sm:mt-6 py-4">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8 sm:mt-12 opacity-10 pointer-events-none z-0 flex justify-center items-center">
+            <img 
+              src={avkLogo} 
+              alt="Avishkar Watermark" 
+              className="w-[280px] sm:w-[400px] md:w-[450px] max-w-none object-contain select-none"
+            />
+          </div>
+          
+          <p className="relative z-10 text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center px-2 flex flex-col items-center">
+            Avishkar, the flagship event of IEEE - VBIT SB, is a Technical Paper Presentation competition held exclusively for the freshmen of VBIT. In the year 2011, Avishkar was awarded the esteemed 'Darrel Chong Gold Student Activity Award'. This year marks the 15th edition of the most vibrant event with a new approach to pave an ideal path for students to enhance their technical cognizance and continue mastery in advanced technologies.
+          </p>
+        </div>
       </section>
 
       {/* Gallery Preview */}
