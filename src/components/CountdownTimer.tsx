@@ -33,7 +33,7 @@ interface RingUnitProps {
   accentColor?: string;
 }
 
-const RingUnit = ({ value, label, max, accentColor = "rgba(148,213,255,0.9)" }: RingUnitProps) => {
+const RingUnit = ({ value, label, max, accentColor = "#000000" }: RingUnitProps) => {
   const SIZE       = 130;
   const STROKE     = 4;
   const GAP        = 6;                                   // gap between track and inner circle
@@ -61,13 +61,13 @@ const RingUnit = ({ value, label, max, accentColor = "rgba(148,213,255,0.9)" }: 
           width={SIZE}
           height={SIZE}
           className="absolute inset-0 rotate-[-90deg]"
-          style={{ filter: "drop-shadow(0 0 6px rgba(148,213,255,0.3))" }}
+          style={{ filter: "drop-shadow(0 0 6px rgba(0,0,0,0.2))" }}
         >
           {/* Track */}
           <circle
             cx={SIZE / 2} cy={SIZE / 2} r={radius}
             fill="none"
-            stroke="rgba(255,255,255,0.08)"
+            stroke="rgba(0,0,0,0.08)"
             strokeWidth={STROKE}
           />
           {/* Progress arc */}
@@ -83,26 +83,24 @@ const RingUnit = ({ value, label, max, accentColor = "rgba(148,213,255,0.9)" }: 
           />
         </svg>
 
-        {/* Inner dark disc */}
+        {/* Inner light disc */}
         <div
-          className="absolute rounded-full flex items-center justify-center"
+          className="absolute rounded-full flex items-center justify-center bg-white"
           style={{
             top:    STROKE + GAP,
             left:   STROKE + GAP,
             width:  innerSize,
             height: innerSize,
-            background: "radial-gradient(circle at 38% 32%, #1e2d45, #0A1628)",
-            boxShadow: "inset 0 2px 12px rgba(0,0,0,0.7), inset 0 -1px 4px rgba(255,255,255,0.04)",
+            boxShadow: "inset 0 2px 8px rgba(0,0,0,0.05), border 1px solid rgba(0,0,0,0.05)",
           }}
         >
           {/* Number */}
           <span
-            className="font-bold text-white leading-none"
+            className="font-bold text-black leading-none"
             style={{
               fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
               fontVariantNumeric: "tabular-nums",
               letterSpacing: "-0.02em",
-              textShadow: `0 0 20px ${accentColor}`,
             }}
           >
             {String(value).padStart(2, "0")}
@@ -113,7 +111,7 @@ const RingUnit = ({ value, label, max, accentColor = "rgba(148,213,255,0.9)" }: 
       {/* Label */}
       <span
         className="text-[10px] sm:text-[11px] uppercase font-semibold tracking-[0.3em]"
-        style={{ color: "rgba(148,213,255,0.5)" }}
+        style={{ color: "rgba(27, 54, 93, 0.7)" }}
       >
         {label}
       </span>
@@ -124,8 +122,8 @@ const RingUnit = ({ value, label, max, accentColor = "rgba(148,213,255,0.9)" }: 
 // ─── Separator dot ─────────────────────────────────────────────────────────
 const Separator = () => (
   <div className="flex flex-col items-center justify-center gap-2 pb-8 self-center">
-    <span className="w-1 h-1 rounded-full bg-white/20" />
-    <span className="w-1 h-1 rounded-full bg-white/20" />
+    <span className="w-1 h-1 rounded-full bg-black/20" />
+    <span className="w-1 h-1 rounded-full bg-black/20" />
   </div>
 );
 
@@ -134,41 +132,13 @@ const CountdownTimer = () => {
   const { days, hours, minutes, seconds } = useCountdown();
 
   return (
-    <section
-      className="relative py-16 sm:py-24 overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #0A1628 0%, #0f1e35 50%, #0A1628 100%)" }}
-    >
-      {/* Ambient glow layers */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: [
-            "radial-gradient(ellipse 60% 50% at 50% 30%, rgba(56,189,248,0.06) 0%, transparent 100%)",
-            "radial-gradient(ellipse 40% 30% at 20% 80%, rgba(99,102,241,0.04) 0%, transparent 100%)",
-            "radial-gradient(ellipse 40% 30% at 80% 80%, rgba(99,102,241,0.04) 0%, transparent 100%)",
-          ].join(", "),
-        }}
-      />
-
-      {/* Subtle grid texture */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.025]"
-        style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <section className="relative py-16 sm:py-24 overflow-hidden bg-white">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
         {/* Heading */}
-        <div className="mb-12 sm:mb-16">
-          <p className="text-[11px] sm:text-xs uppercase tracking-[0.4em] font-semibold mb-3" style={{ color: "rgba(148,213,255,0.5)" }}>
-            Avishkar 2K26 &nbsp;·&nbsp; April 21, 2026
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            Event Commences in&nbsp;:
+        <div className="mb-12 sm:mb-16 w-full flex justify-center">
+          <h2 className="section-title">
+            Event Commences in
           </h2>
-          <div className="mt-4 mx-auto w-12 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(148,213,255,0.4), transparent)" }} />
         </div>
 
         {/* Rings row */}

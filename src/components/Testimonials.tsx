@@ -53,7 +53,7 @@ const useTestimonialCarousel = (count: number, interval = 5000) => {
 };
 
 const Testimonials = () => {
-  const carousel = useTestimonialCarousel(testimonials.length);
+  const carousel = useTestimonialCarousel(testimonials.length, 4000);
 
   return (
     <section className="page-container mb-24">
@@ -79,10 +79,10 @@ const Testimonials = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={carousel.active}
-                initial={{ opacity: 0, y: 15, filter: "blur(8px)", scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
-                exit={{ opacity: 0, y: -15, filter: "blur(8px)", scale: 0.98 }}
-                transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                initial={{ opacity: 0, x: 30, filter: "blur(8px)", scale: 0.98 }}
+                animate={{ opacity: 1, x: 0, filter: "blur(0px)", scale: 1 }}
+                exit={{ opacity: 0, x: -30, filter: "blur(8px)", scale: 0.98 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
                 className="absolute inset-0 flex items-center justify-center p-2"
               >
                 <p className="text-black/80 font-medium text-sm sm:text-base leading-[1.8] text-center max-w-3xl mx-auto whitespace-pre-wrap">
@@ -122,10 +122,10 @@ const Testimonials = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={carousel.active}
-                initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                initial={{ opacity: 0, x: 15, filter: "blur(4px)" }}
+                animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                exit={{ opacity: 0, x: -15, filter: "blur(4px)" }}
+                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <p className="font-bold text-lg text-black">{testimonials[carousel.active].name}</p>
                 <p className="text-sm font-semibold text-black/70">{testimonials[carousel.active].role}</p>
