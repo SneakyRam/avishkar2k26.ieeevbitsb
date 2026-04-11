@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
 
 const galleryImages = [
@@ -12,23 +13,50 @@ const galleryImages = [
   { url: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800", alt: "Keynote speaker on stage" }
 ];
 
-const Gallery = () => (
-  <Layout>
-    <div className="page-container">
-      <h1 className="page-title">GALLERY</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {galleryImages.map((image, i) => (
-          <div key={i} className="aspect-[4/3] bg-muted rounded-xl hover:shadow-lg transition-shadow overflow-hidden group">
-            <img 
-              src={image.url} 
-              alt={image.alt} 
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  return (
+    <Layout>
+      <div className="page-container">
+        <h1 className="page-title">GALLERY</h1>
+        <div className="grid grid-cols-3 gap-2 sm:gap-6">
+          {galleryImages.map((image, i) => (
+            <div key={i} className="aspect-[4/3] bg-muted rounded-xl hover:shadow-lg transition-shadow overflow-hidden group cursor-pointer" onClick={() => setSelectedImage(image.url)}>
+              <img 
+                src={image.url} 
+                alt={image.alt} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Lightbox Overlay */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div className="relative" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/70 border border-white/20 text-white text-xl sm:text-2xl font-bold leading-none hover:bg-white/20 transition-colors z-[101]"
+                onClick={() => setSelectedImage(null)}
+                aria-label="Close lightbox"
+              >
+                &times;
+              </button>
+              <img
+                src={selectedImage.replace('w=800', 'w=1600')}
+                alt="Enlarged gallery view"
+                className="max-w-[98vw] max-h-[88vh] lg:max-w-[99vw] lg:max-h-[90vh] w-auto h-auto min-w-[60vw] lg:min-w-[75vw] object-contain rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
-        ))}
+        )}
       </div>
-    </div>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default Gallery;

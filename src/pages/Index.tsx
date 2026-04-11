@@ -1,17 +1,16 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Layout from "@/components/Layout";
 import CountdownTimer from "@/components/CountdownTimer";
 import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
-import { CursorArrow } from "@/components/ui/cursor-arrow";
 import heroBg from "@/assets/hero-bg-exact.jpg";
 import avkLogo from "@/assets/avk_logo.png";
 
 /* -------------------- Page -------------------- */
 const Index = () => {
-  const registerRef = useRef<HTMLAnchorElement>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <Layout>
@@ -55,7 +54,7 @@ const Index = () => {
             
             {/* Heading */}
             <h1 
-              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight flex flex-col sm:block" 
+              className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight flex flex-col sm:block" 
               style={{ animationDelay: '100ms', animationFillMode: 'both' }}
             >
               AVISHKAR
@@ -66,7 +65,7 @@ const Index = () => {
 
             {/* Subheading */}
             <p 
-              className="text-base sm:text-lg md:text-2xl text-blue-100/90 max-w-3xl font-medium tracking-wide drop-shadow-lg px-2 animate-fadeUp leading-relaxed"
+              className="font-body text-base sm:text-lg md:text-2xl text-blue-100/90 max-w-3xl font-medium tracking-wide drop-shadow-lg px-2 animate-fadeUp leading-relaxed"
               style={{ animationDelay: '200ms', animationFillMode: 'both' }}
             >
               The Flagship Technical Paper Presentation Competition
@@ -79,7 +78,6 @@ const Index = () => {
             >
               <Link
                 to="/contact"
-                ref={registerRef}
                 className="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-full bg-white text-[#0A1628] font-bold tracking-wide shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-105 text-center flex items-center justify-center"
               >
                 Register Now
@@ -94,8 +92,6 @@ const Index = () => {
             
           </div>
         </div>
-
-        <CursorArrow targetRef={registerRef} />
       </section>
 
       {/* Countdown */}
@@ -115,7 +111,7 @@ const Index = () => {
             />
           </div>
           
-          <p className="relative z-10 text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center px-2 flex flex-col items-center">
+          <p className="font-body relative z-10 text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-center px-2 flex flex-col items-center">
             Avishkar, the flagship event of IEEE - VBIT SB, is a Technical Paper Presentation competition held exclusively for the freshmen of VBIT. In the year 2011, Avishkar was awarded the esteemed 'Darrel Chong Gold Student Activity Award'. This year marks the 15th edition of the most vibrant event with a new approach to pave an ideal path for students to enhance their technical cognizance and continue mastery in advanced technologies.
           </p>
         </div>
@@ -133,7 +129,7 @@ const Index = () => {
             { url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800", alt: "College campus fest atmosphere and lighting" },
             { url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800", alt: "Team collaborating on laptops" }
           ].map((image, i) => (
-            <div key={i} className="aspect-[4/3] bg-muted rounded-lg overflow-hidden group">
+            <div key={i} className="aspect-[4/3] bg-muted rounded-lg overflow-hidden group cursor-pointer" onClick={() => setSelectedImage(image.url)}>
               <img 
                 src={image.url} 
                 alt={image.alt} 
@@ -142,6 +138,29 @@ const Index = () => {
             </div>
           ))}
         </div>
+
+        {/* Lightbox Overlay */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div className="relative" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/70 border border-white/20 text-white text-xl sm:text-2xl font-bold leading-none hover:bg-white/20 transition-colors z-[101]"
+                onClick={() => setSelectedImage(null)}
+                aria-label="Close lightbox"
+              >
+                &times;
+              </button>
+              <img
+                src={selectedImage}
+                alt="Enlarged gallery view"
+                className="max-w-[98vw] max-h-[96vh] object-contain rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Timeline */}

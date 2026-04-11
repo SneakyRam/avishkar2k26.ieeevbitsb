@@ -59,7 +59,7 @@ const Testimonials = () => {
     <section className="page-container mb-24">
       <h2 className="section-title">Testimonials</h2>
 
-      <div 
+      <div
         className="max-w-4xl mx-auto relative"
         onMouseEnter={() => carousel.setIsHovered(true)}
         onMouseLeave={() => carousel.setIsHovered(false)}
