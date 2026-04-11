@@ -6,7 +6,7 @@ import CountdownTimer from "@/components/CountdownTimer";
 import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
 import { CursorArrow } from "@/components/ui/cursor-arrow";
-import heroBg from "@/assets/hero-bg_101.jpeg";
+import heroBg from "@/assets/hero-bg-exact.jpg";
 import avkLogo from "@/assets/avk_logo.png";
 
 /* -------------------- Page -------------------- */
@@ -18,34 +18,32 @@ const Index = () => {
       {/* Vercel-Tier High-Performance Hero */}
       <section className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5">
 
-        {/* Hero Background - Pure CSS Recreation of Uploaded Image */}
-        <div className="absolute inset-0 z-0 bg-[#111115] overflow-hidden">
-          {/* Top Left Blue/Purple Glow */}
-          <div className="absolute -top-[10%] -left-[10%] w-[40vw] h-[40vw] min-w-[300px] min-h-[300px] bg-indigo-900/30 rounded-full blur-[100px] sm:blur-[140px]" />
-          <div className="absolute top-[5%] left-[10%] w-[30vw] h-[30vw] min-w-[200px] min-h-[200px] bg-fuchsia-900/20 rounded-full blur-[90px] sm:blur-[120px]" />
-          
-          {/* Bottom Left Purple Glow */}
-          <div className="absolute -bottom-[10%] -left-[5%] w-[45vw] h-[45vw] min-w-[350px] min-h-[350px] bg-purple-900/20 rounded-full blur-[100px] sm:blur-[150px]" />
-          
-          {/* Bottom Right Magenta Glow */}
-          <div className="absolute -bottom-[15%] -right-[10%] w-[50vw] h-[50vw] min-w-[400px] min-h-[400px] bg-fuchsia-900/20 rounded-full blur-[120px] sm:blur-[160px]" />
-          
-          {/* Subtle overlay gradient to blend with the rest of the dark theme */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A1628]/30 to-[#0A1628]/90 pointer-events-none" />
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={heroBg}
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center scale-105"
+            style={{ filter: 'brightness(0.75)' }}
+          />
+          {/* Dark gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#030d1e]/40 via-[#030d1e]/20 to-[#030d1e]/85 pointer-events-none" />
+          {/* Vignette edges */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,#030d1e_100%)] pointer-events-none opacity-60" />
         </div>
 
         {/* Subtle Tech Corners (Premium Touch) */}
-        <div className="absolute top-8 left-8 w-12 h-12 border-t-2 border-l-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
-        <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
-        <div className="absolute bottom-8 left-8 w-12 h-12 border-b-2 border-l-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
-        <div className="absolute bottom-8 right-8 w-12 h-12 border-b-2 border-r-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 border-t-2 border-l-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
+        <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-8 h-8 sm:w-12 sm:h-12 border-t-2 border-r-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
+        <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 border-b-2 border-l-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
+        <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-8 h-8 sm:w-12 sm:h-12 border-b-2 border-r-2 border-sky-400/30 opacity-60 z-10 pointer-events-none" />
 
         {/* Small UI Crosshairs scattered */}
-        <div className="absolute top-[20%] left-[10%] w-4 h-4 opacity-30 z-10 pointer-events-none flex items-center justify-center">
+        <div className="absolute top-[20%] left-[10%] w-4 h-4 opacity-30 z-10 pointer-events-none hidden sm:flex items-center justify-center">
           <div className="absolute w-full h-[1px] bg-white/40" />
           <div className="absolute h-full w-[1px] bg-white/40" />
         </div>
-        <div className="absolute bottom-[30%] right-[15%] w-4 h-4 opacity-30 z-10 pointer-events-none flex items-center justify-center">
+        <div className="absolute bottom-[30%] right-[15%] w-4 h-4 opacity-30 z-10 pointer-events-none hidden sm:flex items-center justify-center">
           <div className="absolute w-full h-[1px] bg-white/40" />
           <div className="absolute h-full w-[1px] bg-white/40" />
         </div>
@@ -76,7 +74,7 @@ const Index = () => {
 
             {/* Bottom CTAs */}
             <div 
-              className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0 animate-fadeUp"
+              className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-[280px] sm:max-w-none sm:w-auto mx-auto px-4 sm:px-0 animate-fadeUp"
               style={{ animationDelay: '300ms', animationFillMode: 'both' }}
             >
               <Link
