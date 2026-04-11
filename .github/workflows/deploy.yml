@@ -27,11 +27,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-<<<<<<< HEAD
-          node-version: 24
-=======
           node-version: 22
->>>>>>> upstream/main
           cache: "npm"
 
       - name: Install dependencies
