@@ -106,12 +106,12 @@ const Index = () => {
         <h2 className="section-title">Gallery</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {[
-            { url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800", alt: "Large stage event presentation" },
-            { url: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800", alt: "Students participating in a hackathon" },
-            { url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", alt: "Technical robotics project demonstration" },
-            { url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800", alt: "Engaged audience during a fest" },
-            { url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800", alt: "College campus fest atmosphere and lighting" },
-            { url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800", alt: "Team collaborating on laptops" }
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image1.jpg", alt: "Avishkar event presentation" },
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image2.jpg", alt: "Students presenting during event" },
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image3.jpg", alt: "Judges and participants interaction" },
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image4.jpg", alt: "Technical presentation on stage" },
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image5.jpg", alt: "Seminar session in progress" },
+            { url: "/avishkar2k26.ieeevbitsb/gallery/image7.jpg", alt: "Presentation evaluation session" }
           ].map((image, i) => (
             <div key={i} className="aspect-[4/3] bg-muted rounded-lg overflow-hidden group cursor-pointer" onClick={() => setSelectedImage(image.url)}>
               <img
