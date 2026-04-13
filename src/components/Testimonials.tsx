@@ -1,37 +1,140 @@
 import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+/* -------------------- Imports -------------------- */
+import gokulMarketing from "@/assets/team/marketing/GOKUL - MARKETING.jpeg";
+import hasiniMarketing from "@/assets/team/marketing/HASINI - MARKETING.jpeg";
+import sanjanaMarketing from "@/assets/team/marketing/SANJANA - MARKETING.jpeg";
+import sathiDoc from "@/assets/team/documentation/SAHTHI - DOC.jpeg";
+import prashanthPD from "@/assets/team/poster-designing/PRASHANTH - PD.jpeg";
+import sreenithiPD from "@/assets/team/poster-designing/SREENIDHI - PD.jpeg";
+import likkithaPD from "@/assets/team/poster-designing/LIKKITHA - PD.jpeg";
+import kripaHos from "@/assets/team/hospitality/KRIPA - HOS.jpeg";
+import manaswiniHos from "@/assets/team/hospitality/MANASWINI - HOS.jpeg";
+import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
+import rahulTreasury from "@/assets/team/treasury/RAHUL - TREASURY.jpeg";
+import jyothsnaWD from "@/assets/team/web-designing/JYOTHSNA - WD.jpeg";
+import ramgopalWD from "@/assets/team/web-designing/RAM GOPAL - WD.jpeg";
+import karthikeyaSMP from "@/assets/team/social-media-promotions/KARTHIKEYA - SMP.jpeg";
+import saiveerSMP from "@/assets/team/social-media-promotions/SAI VEER - SMP.jpeg";
+
+const defaultAvatar = "https://ui-avatars.com/api/?background=random&color=fff&name=";
+
 /* -------------------- Data -------------------- */
 const testimonials = [
   {
-    text: "Being a part of Avishkar 2K25 at VBIT was a defining experience in my journey. The event stood as a strong representation of innovation, creativity, and collaboration, bringing together individuals driven to build, explore, and push boundaries.\n\nWhat truly set Avishkar apart was not just its scale, but the energy behind it—the seamless coordination, diversity of ideas, and the passion shared by every participant. It created an environment where learning happened naturally through competition, teamwork, and meaningful interactions.\n\nThe experience pushed me to think beyond conventional limits, adapt quickly, and contribute effectively in a fast-paced environment. It strengthened my technical understanding while also improving my communication, problem-solving, and ability to work under pressure.\n\nMore importantly, it gave me real-world exposure to how ideas are executed at scale, from planning to implementation. Being part of Avishkar 2K25 was not just about contributing to an event; it was about being part of a vision that celebrates innovation, collaboration, and continuous growth.",
-    name: "G Ramgopal",
+    name: "Sreenidhi",
+    role: "Poster Designing",
+    image: sreenithiPD,
+    text: "Participating in Avishkar 2K25 proved to be a valuable experience, significantly enhancing my presentation skills and building confidence in articulating ideas effectively. Proficiency was developed in the systematic preparation and structured delivery of a technical abstract, while strong teamwork was demonstrated through active contributions to both abstract development and PowerPoint presentation design. As an inaugural event during the first year of study, it held particular significance. Furthermore, involvement with the organizing team provided practical insight into the principles of event management."
+  },
+  {
+    name: "Sanjana",
+    role: "Marketing",
+    image: sanjanaMarketing,
+    text: "Being part of Avishkar 2K25 provided me with a platform to showcase technical ideas and strengthen my core skills. The event helped me develop proficiency in abstract writing and structured presentation delivery, improving my confidence and analytical thinking. I further strengthened my communication skills through the emphasis on clarity and precision in expressing my ideas. Ultimately, the experience contributed greatly to my personal growth and academic development."
+  },
+  {
+    name: "E. Likkitha",
+    role: "Poster Designing",
+    image: likkithaPD,
+    text: "Participating in Avishkar 2K25 was an enriching experience that contributed to both my personal and academic growth. It encouraged me to develop new skills, think analytically and work effectively as part of a team. I gained confidence in expressing and presenting my ideas with clarity, which significantly improved my communication skills. The event inspired me by highlighting the talent of my peers and motivating me to explore my own potential. Through the various activities and challenges, I learned the value of responsibility, discipline and perseverance. Above all, this experience reinforced my commitment to continuous learning and striving for excellence, leaving a lasting impact on my mindset and future aspirations."
+  },
+  {
+    name: "Deepthi",
+    role: "Marketing",
+    image: defaultAvatar + "Deepthi",
+    text: "Being part of Avishkar 2K25 was a memorable and enriching experience, particularly as my first college event. The event offered a valuable platform to share ideas, acquire new knowledge and enhance both my communication and technical skills. Securing second prize was a rewarding moment that acknowledged the effort I had invested. The experience significantly boosted my confidence and motivated me to pursue similar opportunities in the future."
+  },
+  {
+    name: "Bhavana Keerthi",
+    role: "Social Media Promotions",
+    image: defaultAvatar + "Bhavana+Keerthi",
+    text: "Avishkar 2K25 was an experience that played a key role in shaping my personal growth. The event provided a platform to present ideas, enhance communication skills, and build confidence in public speaking. It also emphasized the significance of communicating with clarity, organization, and impact. This experience has positively influenced my learning journey and motivated me to continue developing my skills and abilities."
+  },
+  {
+    name: "Gokul",
+    role: "Marketing",
+    image: gokulMarketing,
+    text: "Being part of Avishkar 2K25 was a valuable experience that enriched both my skill set and academic outlook. The event provided an opportunity to enhance my presentation skills, develop critical thinking and communicate ideas with clarity. Working with my team strengthened my ability to work effectively together, while the competitive environment motivated me to perform at my best. Constructive feedback from the judges offered meaningful suggestions for improvement and elevated my confidence."
+  },
+  {
+    name: "Akshaay Saharsh",
+    role: "Treasury",
+    image: akshayTreasury,
+    text: "Participating in Avishkar 2K25 has been a great experience, the event stands out for its focus on quick thinking, analytical reasoning and the ability to develop structured solutions to real-world problem statements under pressure. Securing a position among the Top 10 not only strengthened my confidence but also enhanced my critical thinking, teamwork and communication skills. Avishkar is more than just a paper presentation event, it is a space that transforms ideas into meaningful solutions and participants into confident, capable problem - solvers."
+  },
+  {
+    name: "Rahul",
+    role: "Treasury",
+    image: rahulTreasury,
+    text: "Avishkar 2K25 marked a significant milestone in my academic journey, as it was my first event at the college level. Teaming up with a friend, I was able to present ideas, think critically and offer practical solutions in an effective manner. Beyond the competition itself, the event broadened my perspective by exposing me to new concepts and allowing me to engage with fellow participants. Reaching the second round was a rewarding outcome that reflected the hard work and dedication we put into the experience."
+  },
+  {
+    name: "Sai Krishna",
+    role: "Marketing",
+    image: defaultAvatar + "Sai+Krishna",
+    text: "I take immense pride in stating that my participation in Avishkar 2K25 has been a profoundly transformative experience, extending far beyond a mere platform to present ideas. It challenged me to think critically, understand real-world problems and develop practical solutions in a structured and effective manner. Throughout this journey, I strengthened my confidence, communication and teamwork skills, while learning to present ideas with greater clarity and purpose. Avishkar 2K25 nurtured both creativity and analytical thinking, shaping me into a more confident and effective problem - solver."
+  },
+  {
+    name: "Ramgopal",
     role: "Web Designing",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    image: ramgopalWD,
+    text: "Participation in Avishkar 2K25 marked a significant milestone in my academic and professional development. It served as a structured platform for experiential learning, self-assessment and skill enhancement. I demonstrated improved analytical thinking, precise communication and a broadened problem-solving perspective. The event enabled me to validate my core strengths while identifying areas for further development. I conclude that engaging with such challenging opportunities is pivotal in aligning individual potential with future academic and professional objectives."
   },
   {
-    text: "Avishkar was the turning point of my first year at VBIT. The competition challenged me to think critically and present my ideas with confidence. The mentorship and support from seniors made it an unforgettable experience. I learned more in those two days than in an entire semester of lectures.",
-    name: "Priya Sharma",
-    role: "Content Writing",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    name: "Karthikeya",
+    role: "Social Media Promotions",
+    image: karthikeyaSMP,
+    text: "Participating in Avishkar 2K25 was a highly constructive experience that contributed significantly to my academic and professional development. The event provided a structured platform to present innovative ideas, receive expert feedback and engage with peers from diverse technical backgrounds. It enhanced my ability to communicate complex concepts effectively and strengthened my confidence in public presentations."
   },
   {
-    text: "Participating in Avishkar helped me discover my passion for research and technical writing. The structured format of abstract and PPT submission taught me discipline and professionalism. I highly recommend every fresher to take part in this incredible event.",
-    name: "Arjun Reddy",
-    role: "Technical Team",
-    image: "https://randomuser.me/api/portraits/men/46.jpg"
+    name: "Manasvini Darbha",
+    role: "Hospitality",
+    image: manaswiniHos,
+    text: "I consider it a privilege to share my experience at Avishkar 2K25, an event that proved to be a defining and unforgettable milestone in my academic journey. Choosing to participate independently rendered the experience all the more meaningful, as every step forward was contingent upon my own effort, preparation and self-belief. Advancing to the Top 10 finalists represented a significant achievement and a moment of considerable academic pride. The most notable aspect of the experience was the level of confidence I demonstrated while presenting on stage. Delivering my ideas, engaging with the jury, responding to their queries and receiving positive feedback from the audience collectively contributed to a meaningful and rewarding presentation experience. Securing 3rd prize was a notable milestone; however, the most substantial outcome was the self-confidence I developed throughout this process."
   },
   {
-    text: "The exposure I got from Avishkar was unmatched. It provided a platform where theory met practice. The feedback from the judges was immensely helpful in refining my future projects.",
-    name: "Neha Singh",
-    role: "Event Management",
-    image: "https://randomuser.me/api/portraits/women/65.jpg"
+    name: "G. Prashanth",
+    role: "Poster Designing",
+    image: prashanthPD,
+    text: "Participating in the Technical Paper Presentation at Avishkar 2K25 has been a truly enriching journey that helped me grow in ways I had never anticipated. It provided me with a valuable platform to express my ideas, take initiative and contribute meaningfully. Progressing through the different stages of the event motivated me to develop patience, adaptability and a deeper appreciation for teamwork. I had the opportunity to interact with inspiring individuals whose ideas and encouragement motivated me to improve myself. The journey was filled with learning, challenges and unforgettable moments that I will always cherish."
   },
   {
-    text: "A truly incredible platform to showcase talent. The collaborative environment and competitive spirit pushed me to deliver my absolute best. It was an experience I'll always cherish.",
-    name: "Rahul Verma",
-    role: "Design Team",
-    image: "https://randomuser.me/api/portraits/men/55.jpg"
+    name: "V. Hasini Sai Sree",
+    role: "Marketing",
+    image: hasiniMarketing,
+    text: "The experience of Avishkar 2K25 was both intellectually stimulating and personally fulfilling. It challenged me to think critically, analyze problems from multiple dimensions and present my ideas with confidence. The exposure I gained through this platform has significantly contributed to my growth and has motivated me to pursue future endeavours with greater enthusiasm."
+  },
+  {
+    name: "Sahithi",
+    role: "Documentation",
+    image: sathiDoc,
+    text: "Being part of Avishkar 2K25 proved to be a meaningful milestone in my journey of learning and selfimprovement. It gave me the opportunity to share my ideas on a larger platform while strengthening essential skills such as communication, public speaking and self-confidence. The experience taught me the value of presenting with clarity, maintaining a logical structure and delivering ideas in an engaging and effective manner. Beyond the event itself, Avishkar 2K25 had a lasting influence on my academic and personal growth. It encouraged me to become more expressive, confident and focused in the way I present my thoughts."
+  },
+  {
+    name: "B. Manoj Kumar",
+    role: "Documentation",
+    image: defaultAvatar + "Manoj+Kumar",
+    text: "Participation in Avishkar 2K25 was a transformative academic experience that extended well beyond conventional classroom presentations. The event challenged me to clearly defend my research approach and thought process before a panel of experienced industry experts, making it both demanding and professionally rewarding. It strengthened my analytical competencies, enhanced my confidence in presenting technical concepts, and motivated me to approach research with greater clarity and structured purpose. I strongly recommend this platform to every aspiring researcher seeking to align academic knowledge with real world technical application."
+  },
+  {
+    name: "Kripa Patel",
+    role: "Hospitality",
+    image: kripaHos,
+    text: "Avishkar 2K25 served as an exceptional platform that extended my learning beyond conventional classroom boundaries. It provided me with the opportunity to apply theoretical concepts in a practical and meaningful context. Engaging with diverse perspectives and innovative ideas broadened my intellectual outlook and encouraged me to approach problem solving with enhanced creativity, precision and analytical thinking."
+  },
+  {
+    name: "Sai Veer",
+    role: "Social Media Promotions",
+    image: saiveerSMP,
+    text: "I am delighted to share my experience of participating in Avishkar 2K25, which significantly enhanced my presentation skills, confidence and ability to communicate research ideas effectively. Working alongside peers and building teamwork added immense value to the experience. Transitioning from participant to organizing committee member provided practical insights into event management. In all, Avishkar 2K25 was an inspiring platform for academic and professional growth."
+  },
+  {
+    name: "Jyothsna Kakarla",
+    role: "Web Designing",
+    image: jyothsnaWD,
+    text: "Being a part of Avishkar 2K25 was a truly valuable experience, especially as a first-year student. It provided me a platform to present my ideas and explore innovative solutions to real - world problems. The constructive feedback I received helped me refine my approach and become more confident in presenting my thoughts. This experience also played an important role in helping me overcome stage fear and express my ideas with greater ease and clarity. The event not only strengthened my technical understanding but also encouraged me to think more critically and confidently."
   }
 ];
 

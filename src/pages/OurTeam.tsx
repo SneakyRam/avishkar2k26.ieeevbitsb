@@ -50,28 +50,28 @@ const members: Member[] = [
   { name: "Gokul",   role: "Marketing", image: gokulMarketing, insta: "https://www.instagram.com/gokulageera/" },
   { name: "Hasini",  role: "Marketing", image: hasiniMarketing, insta: "https://www.instagram.com/_hasinivanumu_/" },
   { name: "Sanjana", role: "Marketing", image: sanjanaMarketing, insta: "https://www.instagram.com/sanjana._0905/" },
-  { name: "Member 4", role: "Marketing" },
-  { name: "Member 5", role: "Marketing" },
+  { name: "Deepthi", role: "Marketing" },
+  { name: "Sai Krishna", role: "Marketing" },
 
   // ── Documentation (3 photos uploaded) ──
   { name: "Nethra",   role: "Documentation", image: nethraDoc, insta: "https://www.instagram.com/nethramaheshwaram/" },
   { name: "Sahithi",  role: "Documentation", image: sathiDoc, insta: "https://www.instagram.com/sahithi_dundigalla/" },
   { name: "Snehitha", role: "Documentation", image: snehithaDoc },
-  { name: "Member 4", role: "Documentation" },
-  { name: "Member 5", role: "Documentation" },
+  { name: "Naveen", role: "Documentation" },
+  { name: "Manoj", role: "Documentation" },
 
   // ── Poster Designing (3 photos uploaded) ──
   { name: "Prashanth", role: "Poster Designing", image: prashanthPD, insta: "https://www.instagram.com/prasshhhzanth/" },
   { name: "Sreenidhi", role: "Poster Designing", image: sreenithiPD, insta: "https://www.instagram.com/sreenidhi_01/" },
   { name: "Likkitha",  role: "Poster Designing", image: likkithaPD, insta: "https://www.instagram.com/_likkithaa/" },
-  { name: "Member 4",  role: "Poster Designing" },
+  { name: "Dharmavardhan",  role: "Poster Designing" },
 
   // ── Hospitality (4 photos uploaded) ──
   { name: "Kripa",     role: "Hospitality", image: kripaHos, insta: "https://www.instagram.com/kripa_.13/" },
   { name: "Madhur",    role: "Hospitality", image: madhurHos, insta: "https://www.instagram.com/not__madhur/" },
   { name: "Manaswini", role: "Hospitality", image: manaswiniHos, insta: "https://www.instagram.com/mmanx_/" },
   { name: "Ruthvika",  role: "Hospitality", image: ruthvikaHos, insta: "https://www.instagram.com/rutvikaaa.30/" },
-  { name: "Member 5",  role: "Hospitality" },
+  { name: "Govind",  role: "Hospitality" },
 
   // ── Treasury (4 photos uploaded) ──
   { name: "Akshay",   role: "Treasury", image: akshayTreasury, insta: "https://www.instagram.com/akshaysaharshgajula/" },
@@ -82,13 +82,13 @@ const members: Member[] = [
   // ── Web Designing (2 photos uploaded) ──
   { name: "Jyothsna",  role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/" },
   { name: "Ram Gopal", role: "Web Designing", image: ramgopalWD, insta: "https://www.instagram.com/raai.gen/" },
-  { name: "Member 3",  role: "Web Designing" },
+  { name: "Siddhu Srinivas",  role: "Web Designing" },
 
   // ── Social Media Promotions (3 photos uploaded) ──
   { name: "Karthikeya", role: "Social Media Promotions", image: karthikeyaSMP, insta: "https://www.instagram.com/karthikeyaganchiri/" },
   { name: "Sai Veer",   role: "Social Media Promotions", image: saiveerSMP, insta: "https://www.instagram.com/_.shutterbug_89/" },
   { name: "Viswajit",   role: "Social Media Promotions", image: viswajitSMP, insta: "https://www.instagram.com/s.__.u.__.r.__.y.__.a/" },
-  { name: "Member 4",   role: "Social Media Promotions" },
+  { name: "Keerthi",   role: "Social Media Promotions" },
 ];
 
 const OurTeam = () => (
