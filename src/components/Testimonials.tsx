@@ -17,6 +17,10 @@ import jyothsnaWD from "@/assets/team/web-designing/JYOTHSNA - WD.jpeg";
 import ramgopalWD from "@/assets/team/web-designing/RAM GOPAL - WD.jpeg";
 import karthikeyaSMP from "@/assets/team/social-media-promotions/KARTHIKEYA - SMP.jpeg";
 import saiveerSMP from "@/assets/team/social-media-promotions/SAI VEER - SMP.jpeg";
+import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpeg";
+import bhavanaSMP from "@/assets/team/social-media-promotions/BHAVANA - SMP.jpeg";
+import krishnaMarketing from "@/assets/team/marketing/KRISHNA - TREASURY.jpeg";
+import manojDoc from "@/assets/team/documentation/MANOJ - DOC.jpeg";
 
 const defaultAvatar = "https://ui-avatars.com/api/?background=random&color=fff&name=";
 
@@ -43,13 +47,13 @@ const testimonials = [
   {
     name: "Deepthi",
     role: "Marketing",
-    image: defaultAvatar + "Deepthi",
+    image: deepthiMarketing,
     text: "Being part of Avishkar 2K25 was a memorable and enriching experience, particularly as my first college event. The event offered a valuable platform to share ideas, acquire new knowledge and enhance both my communication and technical skills. Securing second prize was a rewarding moment that acknowledged the effort I had invested. The experience significantly boosted my confidence and motivated me to pursue similar opportunities in the future."
   },
   {
     name: "Bhavana Keerthi",
     role: "Social Media Promotions",
-    image: defaultAvatar + "Bhavana+Keerthi",
+    image: bhavanaSMP,
     text: "Avishkar 2K25 was an experience that played a key role in shaping my personal growth. The event provided a platform to present ideas, enhance communication skills, and build confidence in public speaking. It also emphasized the significance of communicating with clarity, organization, and impact. This experience has positively influenced my learning journey and motivated me to continue developing my skills and abilities."
   },
   {
@@ -73,7 +77,7 @@ const testimonials = [
   {
     name: "Sai Krishna",
     role: "Marketing",
-    image: defaultAvatar + "Sai+Krishna",
+    image: krishnaMarketing,
     text: "I take immense pride in stating that my participation in Avishkar 2K25 has been a profoundly transformative experience, extending far beyond a mere platform to present ideas. It challenged me to think critically, understand real-world problems and develop practical solutions in a structured and effective manner. Throughout this journey, I strengthened my confidence, communication and teamwork skills, while learning to present ideas with greater clarity and purpose. Avishkar 2K25 nurtured both creativity and analytical thinking, shaping me into a more confident and effective problem - solver."
   },
   {
@@ -115,7 +119,7 @@ const testimonials = [
   {
     name: "B. Manoj Kumar",
     role: "Documentation",
-    image: defaultAvatar + "Manoj+Kumar",
+    image: manojDoc,
     text: "Participation in Avishkar 2K25 was a transformative academic experience that extended well beyond conventional classroom presentations. The event challenged me to clearly defend my research approach and thought process before a panel of experienced industry experts, making it both demanding and professionally rewarding. It strengthened my analytical competencies, enhanced my confidence in presenting technical concepts, and motivated me to approach research with greater clarity and structured purpose. I strongly recommend this platform to every aspiring researcher seeking to align academic knowledge with real world technical application."
   },
   {

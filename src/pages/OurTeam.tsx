@@ -5,37 +5,44 @@ import { Instagram, Linkedin } from "lucide-react";
 import gokulMarketing from "@/assets/team/marketing/GOKUL - MARKETING.jpeg";
 import hasiniMarketing from "@/assets/team/marketing/HASINI - MARKETING.jpeg";
 import sanjanaMarketing from "@/assets/team/marketing/SANJANA - MARKETING.jpeg";
+import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpeg";
+import krishnaMarketing from "@/assets/team/marketing/KRISHNA - TREASURY.jpeg";
 
 // ── Documentation ──
 import nethraDoc from "@/assets/team/documentation/NETHRA - DOC.jpeg";
 import sathiDoc from "@/assets/team/documentation/SAHTHI - DOC.jpeg";
 import snehithaDoc from "@/assets/team/documentation/SNEHITHA - DOC.jpeg";
+import manojDoc from "@/assets/team/documentation/MANOJ - DOC.jpeg";
+import naveenDoc from "@/assets/team/documentation/NAVEEN - DOC.jpg";
 
 // ── Poster Designing ──
 import prashanthPD from "@/assets/team/poster-designing/PRASHANTH - PD.jpeg";
 import sreenithiPD from "@/assets/team/poster-designing/SREENIDHI - PD.jpeg";
 import likkithaPD from "@/assets/team/poster-designing/LIKKITHA - PD.jpeg";
+import dharmaPD from "@/assets/team/poster-designing/DHARMA VARDHAN - PD.jpeg";
 
 // ── Hospitality ──
 import kripaHos from "@/assets/team/hospitality/KRIPA - HOS.jpeg";
 import madhurHos from "@/assets/team/hospitality/MADHUR - HOS.jpeg";
 import manaswiniHos from "@/assets/team/hospitality/MANASWINI - HOS.jpeg";
 import ruthvikaHos from "@/assets/team/hospitality/RUTHVIKA - HOS.jpeg";
+import govindHos from "@/assets/team/hospitality/GOVIND GANESH - HOS.jpeg";
 
 // ── Treasury ──
 import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
 import faizTreasury from "@/assets/team/treasury/FAIZ ALI - TREASURY.jpeg";
-import krishnaTreasury from "@/assets/team/treasury/KRISHNA - TREASURY.jpeg";
 import rahulTreasury from "@/assets/team/treasury/RAHUL - TREASURY.jpeg";
 
 // ── Web Designing ──
 import jyothsnaWD from "@/assets/team/web-designing/JYOTHSNA - WD.jpeg";
 import ramgopalWD from "@/assets/team/web-designing/RAM GOPAL - WD.jpeg";
+import sidduWD from "@/assets/team/web-designing/SIDDU SRINIVAS - WEB.jpeg";
 
 // ── Social Media Promotions ──
 import karthikeyaSMP from "@/assets/team/social-media-promotions/KARTHIKEYA - SMP.jpeg";
 import saiveerSMP from "@/assets/team/social-media-promotions/SAI VEER - SMP.jpeg";
 import viswajitSMP from "@/assets/team/social-media-promotions/VISWAJIT - SMP.jpeg";
+import bhavanaSMP from "@/assets/team/social-media-promotions/BHAVANA - SMP.jpeg";
 
 interface Member {
   name: string;
@@ -46,49 +53,49 @@ interface Member {
 }
 
 const members: Member[] = [
-  // ── Marketing (3 photos uploaded) ──
+  // ── Marketing ──
   { name: "Gokul",   role: "Marketing", image: gokulMarketing, insta: "https://www.instagram.com/gokulageera/" },
   { name: "Hasini",  role: "Marketing", image: hasiniMarketing, insta: "https://www.instagram.com/_hasinivanumu_/" },
   { name: "Sanjana", role: "Marketing", image: sanjanaMarketing, insta: "https://www.instagram.com/sanjana._0905/" },
-  { name: "Deepthi", role: "Marketing" },
-  { name: "Sai Krishna", role: "Marketing" },
+  { name: "Deepthi", role: "Marketing", image: deepthiMarketing },
+  { name: "Sai Krishna", role: "Marketing", image: krishnaMarketing },
 
-  // ── Documentation (3 photos uploaded) ──
+  // ── Documentation ──
   { name: "Nethra",   role: "Documentation", image: nethraDoc, insta: "https://www.instagram.com/nethramaheshwaram/" },
   { name: "Sahithi",  role: "Documentation", image: sathiDoc, insta: "https://www.instagram.com/sahithi_dundigalla/" },
   { name: "Snehitha", role: "Documentation", image: snehithaDoc },
-  { name: "Naveen", role: "Documentation" },
-  { name: "Manoj", role: "Documentation" },
+  { name: "Naveen", role: "Documentation", image: naveenDoc },
+  { name: "Manoj", role: "Documentation", image: manojDoc },
 
-  // ── Poster Designing (3 photos uploaded) ──
+  // ── Poster Designing ──
   { name: "Prashanth", role: "Poster Designing", image: prashanthPD, insta: "https://www.instagram.com/prasshhhzanth/" },
   { name: "Sreenidhi", role: "Poster Designing", image: sreenithiPD, insta: "https://www.instagram.com/sreenidhi_01/" },
   { name: "Likkitha",  role: "Poster Designing", image: likkithaPD, insta: "https://www.instagram.com/_likkithaa/" },
-  { name: "Dharmavardhan",  role: "Poster Designing" },
+  { name: "Dharmavardhan",  role: "Poster Designing", image: dharmaPD },
 
-  // ── Hospitality (4 photos uploaded) ──
+  // ── Hospitality ──
   { name: "Kripa",     role: "Hospitality", image: kripaHos, insta: "https://www.instagram.com/kripa_.13/" },
   { name: "Madhur",    role: "Hospitality", image: madhurHos, insta: "https://www.instagram.com/not__madhur/" },
   { name: "Manaswini", role: "Hospitality", image: manaswiniHos, insta: "https://www.instagram.com/mmanx_/" },
   { name: "Ruthvika",  role: "Hospitality", image: ruthvikaHos, insta: "https://www.instagram.com/rutvikaaa.30/" },
-  { name: "Govind",  role: "Hospitality" },
+  { name: "Govind",  role: "Hospitality", image: govindHos },
 
-  // ── Treasury (4 photos uploaded) ──
+  // ── Treasury ──
   { name: "Akshay",   role: "Treasury", image: akshayTreasury, insta: "https://www.instagram.com/akshaysaharshgajula/" },
   { name: "Faiz Ali", role: "Treasury", image: faizTreasury, insta: "https://www.instagram.com/fxiz_ali3/" },
-  { name: "Krishna",  role: "Treasury", image: krishnaTreasury, insta: "https://www.instagram.com/sai_krishna_1127/" },
   { name: "Rahul",    role: "Treasury", image: rahulTreasury, insta: "https://www.instagram.com/rahul__chary_07/" },
+  { name: "Karthik",  role: "Treasury" },
 
-  // ── Web Designing (2 photos uploaded) ──
+  // ── Web Designing ──
   { name: "Jyothsna",  role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/" },
   { name: "Ram Gopal", role: "Web Designing", image: ramgopalWD, insta: "https://www.instagram.com/raai.gen/" },
-  { name: "Siddhu Srinivas",  role: "Web Designing" },
+  { name: "Siddhu Srinivas",  role: "Web Designing", image: sidduWD },
 
-  // ── Social Media Promotions (3 photos uploaded) ──
+  // ── Social Media Promotions ──
   { name: "Karthikeya", role: "Social Media Promotions", image: karthikeyaSMP, insta: "https://www.instagram.com/karthikeyaganchiri/" },
   { name: "Sai Veer",   role: "Social Media Promotions", image: saiveerSMP, insta: "https://www.instagram.com/_.shutterbug_89/" },
   { name: "Viswajit",   role: "Social Media Promotions", image: viswajitSMP, insta: "https://www.instagram.com/s.__.u.__.r.__.y.__.a/" },
-  { name: "Keerthi",   role: "Social Media Promotions" },
+  { name: "Keerthi",   role: "Social Media Promotions", image: bhavanaSMP },
 ];
 
 const OurTeam = () => (
