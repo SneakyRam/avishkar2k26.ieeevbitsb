@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Download } from "lucide-react";
 
-import samplePPT from "@/assets/team/sample/Sample PPT-6.pptx";
+import samplePPT from "@/assets/team/sample/SamplePPT.pptx";
 import sampleAbstractInd from "@/assets/team/sample/Sample Abstract individual.pdf";
 import sampleAbstractTeam from "@/assets/team/sample/Sample Abtract team.pdf";
 import problemStatement from "@/assets/team/sample/Avishkar 2k26 Problem statemen (1).pdf";
