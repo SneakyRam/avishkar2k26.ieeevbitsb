@@ -178,7 +178,7 @@ const Testimonials = () => {
               borderTop: "24px solid #D8E2FF",
             }}
           />
-          <div className="relative min-h-[260px] sm:min-h-[220px] flex items-center justify-center overflow-hidden">
+          <div className="relative min-h-[380px] sm:min-h-[280px] md:min-h-[240px] flex items-center justify-center overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={carousel.active}
@@ -186,7 +186,7 @@ const Testimonials = () => {
                 animate={{ opacity: 1, x: 0, filter: "blur(0px)", scale: 1 }}
                 exit={{ opacity: 0, x: -30, filter: "blur(8px)", scale: 0.98 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                className="absolute inset-0 flex items-center justify-center p-2"
+                className="w-full flex items-center justify-center p-4 sm:p-8"
               >
                 <p className="text-black/80 font-medium text-sm sm:text-base leading-[1.8] text-center max-w-3xl mx-auto whitespace-pre-wrap">
                   {testimonials[carousel.active].text}
