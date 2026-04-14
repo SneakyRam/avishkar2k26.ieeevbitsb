@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import Layout from "@/components/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +8,35 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 const Contact = () => {
   const [agreed, setAgreed] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!agreed) {
+      alert("Please agree to our privacy policy.");
+      return;
+    }
+    if (!formRef.current) return;
+
+    setStatus("loading");
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
+      "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+      formRef.current,
+      "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+    )
+    .then(() => {
+      setStatus("success");
+      formRef.current?.reset();
+      setAgreed(false);
+      setTimeout(() => setStatus("idle"), 5000);
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+    });
+  };
 
   return (
     <Layout>
@@ -20,7 +50,7 @@ const Contact = () => {
               Email, call, or complete the form to resolve queries about Avishkar
             </p>
             <p className="text-center">
-              <a href="mailto:avishkar2k26@gmail.com" className="text-primary text-sm underline">avishkar2k26@gmail.com</a>
+              <a href="mailto:avishkar2k26.ieeevbitsb@gmail.com" className="text-primary text-sm underline">avishkar2k26.ieeevbitsb@gmail.com</a>
             </p>
             <p className="text-sm text-muted-foreground text-center">Venkat Ajay - 9014454476</p>
             <p className="text-sm text-muted-foreground text-center">Lohitaksh - 8651909766</p>
@@ -44,32 +74,36 @@ const Contact = () => {
           {/* Form */}
           <div className="bg-card border-2 border-foreground/20 rounded-2xl p-6 sm:p-8">
             <h2 className="text-xl sm:text-2xl font-bold font-display mb-6 text-foreground">You can reach us anytime</h2>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-xs text-muted-foreground mb-1 block">First name</label>
-                  <Input placeholder="First name" />
+                  <Input name="firstName" placeholder="First name" required />
                 </div>
                 <div>
                   <label className="text-xs text-muted-foreground mb-1 block">Last name</label>
-                  <Input placeholder="Last name" />
+                  <Input name="lastName" placeholder="Last name" />
                 </div>
               </div>
               <div>
                 <label className="text-xs text-muted-foreground mb-1 block">Email</label>
-                <Input type="email" placeholder="Your email" />
+                <Input name="email" type="email" placeholder="Your email" required />
               </div>
               <div>
                 <label className="text-xs text-muted-foreground mb-1 block">Phone number</label>
-                <Input placeholder="Phone number" />
+                <Input name="phone" placeholder="Phone number" />
               </div>
               <div>
                 <label className="text-xs text-muted-foreground mb-1 block">Message</label>
-                <Textarea placeholder="How can we help?" rows={4} />
+                <Textarea name="message" placeholder="How can we help?" rows={4} required />
               </div>
-              <Button className="w-full" type="submit">Send Message</Button>
+              <Button className="w-full" type="submit" disabled={status === "loading"}>
+                {status === "loading" ? "Sending..." : "Send Message"}
+              </Button>
+              {status === "success" && <p className="text-green-500 text-sm text-center">Message sent successfully!</p>}
+              {status === "error" && <p className="text-red-500 text-sm text-center">Failed to send message. Please try again.</p>}
               <div className="flex items-center gap-2">
-                <Checkbox checked={agreed} onCheckedChange={(v) => setAgreed(!!v)} />
+                <Checkbox checked={agreed} onCheckedChange={(v) => setAgreed(!!v)} required />
                 <span className="text-xs text-muted-foreground">You agree to our friendly privacy policy.</span>
               </div>
             </form>
