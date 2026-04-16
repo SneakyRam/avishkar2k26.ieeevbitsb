@@ -18,9 +18,9 @@ const ResourceCard = ({ title, description, link }: ResourceCardProps) => (
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1.5 mt-2 self-start px-4 py-1.5 rounded-md
-                 bg-[#1C31D4] text-white text-sm font-medium
+                 text-[#1C31D4] text-sm font-semibold
                  transition-all duration-200
-                 hover:bg-[#1C31D4] hover:text-white hover:shadow-md hover:scale-105
+                 hover:bg-[#1C31D4]/10 hover:shadow-md hover:scale-105
                  active:scale-95"
     >
       Click here

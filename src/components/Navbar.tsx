@@ -28,11 +28,11 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#0A1628] sticky top-0 z-50 shadow-sm">
-      <div className="w-full mx-auto px-4 md:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
-        <Link to="/" className="flex items-center justify-center lg:justify-start gap-5 sm:gap-8">
-          <img src={vbit_logo} alt="VBIT Logo" className="h-10 sm:h-12 w-auto object-contain" />
-          <img src={avkLogo} alt="Avishkar Logo" className="h-16 sm:h-20 w-auto object-contain translate-y-1.5" />
-          <img src={ieeeLogo} alt="IEEE Logo" className="h-12 sm:h-14 w-auto object-contain" />
+      <div className="w-full mx-auto px-3 sm:px-4 md:px-8 lg:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
+        <Link to="/" className="flex items-center gap-2 sm:gap-4 md:gap-6 shrink-0">
+          <img src={vbit_logo} alt="VBIT Logo" className="h-8 sm:h-10 md:h-12 w-auto object-contain" />
+          <img src={avkLogo} alt="Avishkar Logo" className="h-10 sm:h-14 md:h-20 w-auto object-contain translate-y-0.5 sm:translate-y-1" />
+          <img src={ieeeLogo} alt="IEEE Logo" className="h-8 sm:h-10 md:h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop */}

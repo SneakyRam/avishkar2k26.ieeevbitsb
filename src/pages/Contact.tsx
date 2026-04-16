@@ -43,9 +43,9 @@ const Contact = () => {
       <div className="page-container">
         <h1 className="page-title">Contact Us</h1>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+        <div className="max-w-4xl mx-auto bg-[#CBD5F5] rounded-3xl p-4 sm:p-6 md:p-8 grid md:grid-cols-2 gap-4 sm:gap-6">
           {/* Info */}
-          <div className="bg-card border-2 border-foreground/20 rounded-2xl p-6 sm:p-8 space-y-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
             <p className="text-sm text-muted-foreground text-left">
               Email, call, or complete the form to resolve queries about Avishkar
             </p>
@@ -72,7 +72,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-card border-2 border-foreground/20 rounded-2xl p-6 sm:p-8">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm">
             <h2 className="text-xl sm:text-2xl font-bold font-display mb-6 text-foreground">You can reach us anytime</h2>
             <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
               <div className="grid grid-cols-2 gap-3">
