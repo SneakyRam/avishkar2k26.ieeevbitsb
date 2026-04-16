@@ -45,26 +45,26 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#0A1628] sticky top-0 z-50 shadow-md">
+    <nav className="bg-[#0A1628] sticky top-0 z-50 shadow-sm">
       {/* ── Main bar ── */}
-      <div className="w-full px-3 sm:px-6 lg:px-12 flex items-center justify-between h-14 sm:h-16 md:h-18">
+      <div className="w-full mx-auto px-3 sm:px-4 md:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-18 md:h-20">
 
         {/* Logos */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-4 shrink-0" aria-label="Go to home">
+        <Link to="/" className="flex items-center gap-2 sm:gap-4 md:gap-6 shrink-0" aria-label="Go to home">
           <img
             src={vbit_logo}
             alt="VBIT Logo"
-            className="h-9 xs:h-10 sm:h-12 md:h-14 w-auto object-contain"
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0"
           />
           <img
             src={avkLogo}
             alt="Avishkar Logo"
-            className="h-12 xs:h-14 sm:h-18 md:h-20 w-auto object-contain translate-y-1"
+            className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 translate-y-1 md:translate-y-2"
           />
           <img
             src={ieeeLogo}
             alt="IEEE Logo"
-            className="h-8 xs:h-9 sm:h-11 md:h-12 w-auto object-contain"
+            className="h-8 sm:h-10 md:h-12 w-auto object-contain shrink-0"
           />
         </Link>
 

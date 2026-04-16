@@ -22,7 +22,7 @@ const Index = () => {
           <img
             src={heroBg}
             alt="Hero Background"
-            className="w-full h-full object-cover object-center scale-125"
+            className="w-full h-full object-cover object-center scale-150 sm:scale-125"
             style={{ filter: 'brightness(0.75)' }}
           />
           {/* Dark gradient overlay for text readability */}
@@ -109,7 +109,7 @@ const Index = () => {
       {/* Gallery Preview */}
       <section className="page-container">
         <h2 className="section-title">Gallery</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {[
             { url: "/avishkar2k26.ieeevbitsb/gallery/image1.jpg", alt: "Avishkar event presentation" },
             { url: "/avishkar2k26.ieeevbitsb/gallery/image2.jpg", alt: "Students presenting during event" },

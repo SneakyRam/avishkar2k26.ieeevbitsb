@@ -75,7 +75,7 @@ const Contact = () => {
           <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm">
             <h2 className="text-xl sm:text-2xl font-bold font-display mb-6 text-foreground">You can reach us anytime</h2>
             <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="text-xs text-muted-foreground mb-1 block">First name</label>
                   <Input name="firstName" placeholder="First name" required />

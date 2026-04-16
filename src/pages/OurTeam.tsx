@@ -30,6 +30,7 @@ import govindHos from "@/assets/team/hospitality/GOVIND GANESH - HOS.jpeg";
 
 // ── Treasury ──
 import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
+import karthikTreasury from "@/assets/team/treasury/karthik.jpeg";
 import faizTreasury from "@/assets/team/treasury/FAIZ ALI - TREASURY.jpeg";
 import rahulTreasury from "@/assets/team/treasury/RAHUL - TREASURY.jpeg";
 
@@ -84,7 +85,7 @@ const members: Member[] = [
   { name: "Akshay",   role: "Treasury", image: akshayTreasury, insta: "https://www.instagram.com/akshaysaharshgajula/", linkedin: "https://www.linkedin.com/in/akshay-saharsh-8522a53a1/" },
   { name: "Faiz Ali", role: "Treasury", image: faizTreasury, insta: "https://www.instagram.com/faiz_ali/", linkedin: "https://in.linkedin.com/in/mohammed-faiz-ali-13b854402/" },
   { name: "Rahul",    role: "Treasury", image: rahulTreasury, insta: "https://www.instagram.com/rahul__chary_07/", linkedin: "https://www.linkedin.com/in/rahul-kolloju-b4732438a/" },
-  { name: "Karthik",  role: "Treasury", insta: "https://www.instagram.com/karthik.__.200/", linkedin: "https://www.linkedin.com/in/ramavath-karthik-403235403/" },
+  { name: "Karthik",  role: "Treasury", image: karthikTreasury, insta: "https://www.instagram.com/karthik.__.200/", linkedin: "https://www.linkedin.com/in/ramavath-karthik-403235403/" },
 
   // ── Web Designing ──
   { name: "Jyothsna",        role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/", linkedin: "https://www.linkedin.com/in/jyothsna-kakarla-245b8a37a/" },
@@ -102,7 +103,7 @@ const OurTeam = () => (
   <Layout>
     <div className="page-container">
       <h1 className="page-title">Our Team</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {members.map((m, i) => (
           <div
             key={i}

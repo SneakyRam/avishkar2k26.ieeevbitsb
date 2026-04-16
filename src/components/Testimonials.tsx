@@ -230,15 +230,15 @@ const Testimonials = () => {
 
   const variants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 60 : -60,
+      x: dir > 0 ? 30 : -30,
       opacity: 0,
-      filter: "blur(6px)",
+      filter: "blur(4px)",
     }),
     center: { x: 0, opacity: 1, filter: "blur(0px)" },
     exit: (dir: number) => ({
-      x: dir > 0 ? -60 : 60,
+      x: dir > 0 ? -30 : 30,
       opacity: 0,
-      filter: "blur(6px)",
+      filter: "blur(4px)",
     }),
   };
 
@@ -290,38 +290,42 @@ const Testimonials = () => {
               }}
             />
             {/* Role title bar */}
-            <div className="pt-8 px-8 pb-3 text-center border-b border-gray-100">
-              <AnimatePresence mode="wait">
-                <motion.h3
-                  key={`role-${carousel.active}`}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-base sm:text-lg font-bold text-gray-900"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {testimonials[carousel.active].role}
-                </motion.h3>
-              </AnimatePresence>
+            <div className="pt-8 px-8 pb-3 text-center border-b border-gray-100 min-h-[70px]">
+              <div className="grid [grid-template-areas:'stack'] place-items-center w-full">
+                <AnimatePresence custom={carousel.direction}>
+                  <motion.h3
+                    key={`role-${carousel.active}`}
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className="col-[stack] row-[stack] text-base sm:text-lg font-bold text-gray-900"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    {testimonials[carousel.active].role}
+                  </motion.h3>
+                </AnimatePresence>
+              </div>
             </div>
 
             {/* Testimonial text */}
-            <div className="px-6 sm:px-10 py-6 flex items-center justify-center" style={{ minHeight: "180px" }}>
-              <AnimatePresence mode="wait" custom={carousel.direction}>
-                <motion.p
-                  key={`text-${carousel.active}`}
-                  custom={carousel.direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify"
-                >
-                  {testimonials[carousel.active].text}
-                </motion.p>
-              </AnimatePresence>
+            <div className="px-6 sm:px-10 py-6" style={{ minHeight: "240px" }}>
+              <div className="grid [grid-template-areas:'stack'] place-items-center w-full h-full">
+                <AnimatePresence custom={carousel.direction}>
+                  <motion.p
+                    key={`text-${carousel.active}`}
+                    custom={carousel.direction}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="col-[stack] row-[stack] text-gray-700 text-sm sm:text-base leading-relaxed text-justify w-full"
+                  >
+                    {testimonials[carousel.active].text}
+                  </motion.p>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
 
@@ -373,19 +377,21 @@ const Testimonials = () => {
         </div>
 
         {/* Name label */}
-        <div className="h-10 flex items-center justify-center -mt-4">
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={`name-${carousel.active}`}
-              initial={{ opacity: 0, y: 8, filter: "blur(4px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-              className="text-white font-semibold text-base sm:text-lg tracking-wide"
-            >
-              {testimonials[carousel.active].name}
-            </motion.p>
-          </AnimatePresence>
+        <div className="h-10 flex items-center justify-center mt-2 group relative">
+          <div className="grid [grid-template-areas:'stack'] place-items-center w-full">
+            <AnimatePresence custom={carousel.direction}>
+              <motion.p
+                key={`name-${carousel.active}`}
+                initial={{ opacity: 0, y: 5, filter: "blur(2px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: -5, filter: "blur(2px)" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="col-[stack] row-[stack] text-white font-semibold text-base sm:text-lg tracking-wide w-full max-w-[250px] text-center truncate"
+              >
+                {testimonials[carousel.active].name}
+              </motion.p>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>
