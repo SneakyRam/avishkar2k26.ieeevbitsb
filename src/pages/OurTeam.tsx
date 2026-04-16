@@ -102,7 +102,7 @@ const OurTeam = () => (
   <Layout>
     <div className="page-container">
       <h1 className="page-title">Our Team</h1>
-      <div className="grid grid-cols-3 gap-2 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-6">
         {members.map((m, i) => (
           <div
             key={i}

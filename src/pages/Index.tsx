@@ -38,8 +38,8 @@ const Index = () => {
 
             {/* Heading */}
             <h1 
-              className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight" 
-              style={{ animationDelay: '100ms', animationFillMode: 'both', marginBottom: '0.5rem' }}
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight" 
+              style={{ fontFamily: "'Times New Roman', Times, serif", animationDelay: '100ms', animationFillMode: 'both', marginBottom: '0.5rem' }}
             >
               AVISHKAR <span className="sm:ml-2">2K26</span>
             </h1>
@@ -107,7 +107,7 @@ const Index = () => {
       {/* Gallery Preview */}
       <section className="page-container">
         <h2 className="section-title">Gallery</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           {[
             { url: "/avishkar2k26.ieeevbitsb/gallery/image1.jpg", alt: "Avishkar event presentation" },
             { url: "/avishkar2k26.ieeevbitsb/gallery/image2.jpg", alt: "Students presenting during event" },
