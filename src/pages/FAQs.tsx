@@ -33,9 +33,10 @@ const FAQs = () => (
               value={`item-${i}`}
               className="group bg-white mb-3 rounded-lg border border-border border-l-4 border-l-transparent px-4
                          transition-all duration-300 ease-in-out
-                         hover:shadow-lg hover:-translate-y-1 hover:scale-[1.01] hover:bg-[#D9E1FF] hover:border-l-primary"
+                         data-[state=open]:bg-[#D9E1FF] data-[state=open]:border-l-primary
+                         hover:shadow-lg hover:-translate-y-1 hover:scale-[1.01]"
             >
-              <AccordionTrigger className="text-sm sm:text-base text-foreground font-medium hover:no-underline transition-colors duration-300 group-hover:text-primary">
+              <AccordionTrigger className="text-sm sm:text-base text-foreground font-medium hover:no-underline transition-colors duration-300 data-[state=open]:text-primary">
                 {faq.q}
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground text-justify">

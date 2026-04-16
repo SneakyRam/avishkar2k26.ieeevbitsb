@@ -28,11 +28,11 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <div className="plus-icon bg-[#897FFF] h-6 w-6 shrink-0 flex items-center justify-center rounded-sm transition-transform duration-200">
-        <Plus className="h-4 w-4 text-white stroke-[2.5]" />
+      <div className="plus-icon bg-white border border-gray-300 [[data-state=open]_&]:bg-[#897FFF] [[data-state=open]_&]:border-[#897FFF] h-6 w-6 shrink-0 flex items-center justify-center rounded-sm transition-all duration-200">
+        <Plus className="h-4 w-4 text-gray-500 [[data-state=open]_&]:text-white stroke-[2.5]" />
       </div>
-      <div className="minus-icon bg-[#897FFF] h-6 w-6 shrink-0 flex items-center justify-center rounded-sm transition-transform duration-200">
-        <Minus className="h-4 w-4 text-white stroke-[2.5]" />
+      <div className="minus-icon bg-white border border-gray-300 [[data-state=open]_&]:bg-[#897FFF] [[data-state=open]_&]:border-[#897FFF] h-6 w-6 shrink-0 flex items-center justify-center rounded-sm transition-all duration-200">
+        <Minus className="h-4 w-4 text-gray-500 [[data-state=open]_&]:text-white stroke-[2.5]" />
       </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
