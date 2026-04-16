@@ -65,8 +65,10 @@ const Index = () => {
               className="flex items-center justify-center w-full animate-fadeUp"
               style={{ animationDelay: '300ms', animationFillMode: 'both', marginTop: '0.5rem' }}
             >
-              <Link
-                to="/contact"
+              <a
+                href="https://bit.ly/Avishkar2K26"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body px-10 sm:px-14 py-3 sm:py-3.5 rounded-full text-[#1a1a2e] font-bold tracking-[0.2em] text-xs sm:text-sm transition-all duration-300 hover:scale-105 text-center border border-white/30"
                 style={{
                   background: 'linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 50%, #d4d4d4 100%)',
@@ -74,7 +76,7 @@ const Index = () => {
                 }}
               >
                 REGISTER
-              </Link>
+              </a>
             </div>
 
           </div>
