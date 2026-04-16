@@ -9,40 +9,46 @@ const resources: { title: string; description: string; link: string }[] = [
     link: "https://core.ac.uk",
   },
   {
-    title: "IEEE Xplore",
-    description:
-      "IEEE Xplore digital library provides access to technical literature in engineering, computer science, and related technologies.",
-    link: "https://ieeexplore.ieee.org",
-  },
-  {
-    title: "Google Scholar",
-    description:
-      "Freely accessible web search engine that indexes scholarly literature across many disciplines and sources.",
-    link: "https://scholar.google.com",
-  },
-  {
-    title: "ResearchGate",
-    description:
-      "Professional network for scientists and researchers to share papers, ask and answer questions, and find collaborators.",
-    link: "https://www.researchgate.net",
-  },
-  {
     title: "Semantic Scholar",
     description:
-      "AI-powered research tool for scientific literature. It uses machine learning to help discover relevant papers.",
+      "An AI-powered research platform that helps students quickly find relevant papers, key insights, and influential studies across various fields.",
     link: "https://www.semanticscholar.org",
   },
   {
-    title: "arXiv",
+    title: "Zenodo",
     description:
-      "Open-access archive for scholarly articles in the fields of physics, mathematics, computer science, and more.",
-    link: "https://arxiv.org",
+      "A trusted open repository developed by CERN where researchers can share datasets, research papers, and software across all disciplines.",
+    link: "https://zenodo.org",
   },
   {
-    title: "PubMed",
+    title: "Harvard Dataverse",
     description:
-      "Free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics.",
-    link: "https://pubmed.ncbi.nlm.nih.gov",
+      "An open data repository that provides access to high-quality research datasets, enabling students to explore and reuse real-world data.",
+    link: "https://dataverse.harvard.edu",
+  },
+  {
+    title: "DOAJ",
+    description:
+      "A comprehensive directory of peer-reviewed open access journals, ensuring access to reliable and high-quality academic publications.",
+    link: "https://doaj.org",
+  },
+  {
+    title: "PubMed Central",
+    description:
+      "A free digital archive of biomedical and life sciences research articles, widely used for scientific and medical studies.",
+    link: "https://www.ncbi.nlm.nih.gov/pmc/",
+  },
+  {
+    title: "Shodhganga",
+    description:
+      "A national repository of Indian theses and dissertations, providing valuable academic research from universities across India.",
+    link: "https://shodhganga.inflibnet.ac.in",
+  },
+  {
+    title: "OpenAIRE",
+    description:
+      "A comprehensive platform that connects research publications, datasets, and projects, supporting open science and collaboration.",
+    link: "https://www.openaire.eu",
   },
 ];
 
