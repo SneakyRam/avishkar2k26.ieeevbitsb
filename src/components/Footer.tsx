@@ -1,7 +1,7 @@
 import { Instagram } from "lucide-react";
 
 const Footer = () => (
-  <footer className="bg-[#0A1628] text-white py-8 mt-auto">
+  <footer className="bg-black text-white py-8 mt-auto">
     <div className="max-w-5xl mx-auto px-4 text-center space-y-3">
       <p className="text-sm sm:text-base">
         Designed and Developed by Web Designing Team | Avishkar 2K26

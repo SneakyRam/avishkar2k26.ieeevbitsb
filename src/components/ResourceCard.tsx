@@ -12,7 +12,7 @@ const ResourceCard = ({ title, description, link }: ResourceCardProps) => (
                   transition-all duration-300 ease-in-out
                   hover:shadow-xl hover:-translate-y-2 hover:scale-[1.01] hover:bg-[#B0C8F0] hover:border-primary">
     <h3 className="text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">{title}</h3>
-    <p className="text-sm text-muted-foreground flex-1">{description}</p>
+    <p className="text-sm text-muted-foreground flex-1 text-justify">{description}</p>
     <a
       href={link}
       target="_blank"

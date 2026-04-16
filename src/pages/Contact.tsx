@@ -46,27 +46,27 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
           {/* Info */}
           <div className="bg-card border-2 border-foreground/20 rounded-2xl p-6 sm:p-8 space-y-4">
-            <p className="text-sm text-muted-foreground text-center">
+            <p className="text-sm text-muted-foreground text-left">
               Email, call, or complete the form to resolve queries about Avishkar
             </p>
-            <p className="text-center">
+            <p className="text-left">
               <a href="mailto:avishkar2k26.ieeevbitsb@gmail.com" className="text-primary text-sm underline">avishkar2k26.ieeevbitsb@gmail.com</a>
             </p>
-            <p className="text-sm text-muted-foreground text-center">Venkat Ajay - 9014454476</p>
-            <p className="text-sm text-muted-foreground text-center">Lohitaksh - 8651909766</p>
+            <p className="text-sm text-muted-foreground text-left">Sai Krishna - 9032348479</p>
+            <p className="text-sm text-muted-foreground text-left">Gokul - 7207232672</p>
 
             <div className="pt-4 space-y-3">
               <div>
-                <h3 className="font-bold text-sm text-foreground text-center">Help Desk Support</h3>
-                <p className="text-xs text-muted-foreground text-center mt-1">Our support team is available from 3:30 PM - 4:20 PM to address any concerns or queries at Pratham Block</p>
+                <h3 className="font-bold text-sm text-foreground text-left">Help Desk Support</h3>
+                <p className="text-xs text-muted-foreground text-left mt-1">Our support team is available from 3:30 PM - 4:20 PM to address any concerns or queries at Pratham Block</p>
               </div>
               <div>
-                <h3 className="font-bold text-sm text-foreground text-center">Event Inquiries</h3>
-                <p className="text-xs text-muted-foreground text-center mt-1">For Event-related questions or press inquiries, please contact us at given numbers</p>
+                <h3 className="font-bold text-sm text-foreground text-left">Event Inquiries</h3>
+                <p className="text-xs text-muted-foreground text-left mt-1">For Event-related questions or press inquiries, please contact us at given numbers</p>
               </div>
               <div>
-                <h3 className="font-bold text-sm text-foreground text-center">Feedback and Suggestions</h3>
-                <p className="text-xs text-muted-foreground text-center mt-1">We value your feedback and are continuously working to improvise our work.</p>
+                <h3 className="font-bold text-sm text-foreground text-left">Feedback and Suggestions</h3>
+                <p className="text-xs text-muted-foreground text-left mt-1">We value your feedback and are continuously working to improvise our work.</p>
               </div>
             </div>
           </div>

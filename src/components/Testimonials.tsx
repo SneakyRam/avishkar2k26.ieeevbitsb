@@ -192,7 +192,7 @@ const Testimonials = () => {
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
                 className="w-full flex items-center justify-center p-4 sm:p-8"
               >
-                <p className="text-black/80 font-medium text-sm sm:text-base leading-[1.8] text-center max-w-3xl mx-auto whitespace-pre-wrap">
+                <p className="text-black/80 font-medium text-sm sm:text-base leading-[1.8] text-justify max-w-3xl mx-auto whitespace-pre-wrap">
                   {testimonials[carousel.active].text}
                 </p>
               </motion.div>

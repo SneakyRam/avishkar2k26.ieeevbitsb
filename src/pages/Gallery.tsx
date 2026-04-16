@@ -19,7 +19,7 @@ const Gallery = () => {
   return (
     <Layout>
       <div className="page-container">
-        <h1 className="page-title">GALLERY</h1>
+        <h1 className="page-title">Gallery</h1>
         <div className="grid grid-cols-3 gap-2 sm:gap-6">
           {galleryImages.map((image, i) => (
             <div key={i} className="aspect-[4/3] bg-muted rounded-xl hover:shadow-lg transition-shadow overflow-hidden group cursor-pointer" onClick={() => setSelectedImage(image.url)}>

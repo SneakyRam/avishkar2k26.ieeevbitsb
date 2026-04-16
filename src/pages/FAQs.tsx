@@ -38,7 +38,7 @@ const FAQs = () => (
               <AccordionTrigger className="text-sm sm:text-base text-foreground font-medium hover:no-underline transition-colors duration-300 group-hover:text-primary">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
+              <AccordionContent className="text-sm text-muted-foreground text-justify">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
