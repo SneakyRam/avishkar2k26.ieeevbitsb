@@ -249,6 +249,11 @@ const Testimonials = () => {
       onMouseEnter={() => carousel.setIsHovered(true)}
       onMouseLeave={() => carousel.setIsHovered(false)}
     >
+      {/* ── Heading ── */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4">
+        <h2 className="section-title text-white">Testimonials</h2>
+      </div>
+
       {/* ── Dot grids ── */}
       <DotGrid className="absolute top-6 right-6 opacity-70 pointer-events-none" />
       <DotGrid className="absolute bottom-6 left-6 opacity-70 pointer-events-none" />
@@ -354,11 +359,10 @@ const Testimonials = () => {
                   carousel.setActive(index);
                 }}
                 aria-label={`View testimonial by ${t.name}`}
-                className={`rounded-full overflow-hidden flex-shrink-0 focus:outline-none transition-all duration-300 ${
-                  isActive
+                className={`rounded-full overflow-hidden flex-shrink-0 focus:outline-none transition-all duration-300 ${isActive
                     ? "ring-4 ring-white ring-offset-2 ring-offset-[#0d1b2e] shadow-xl"
                     : "opacity-60 hover:opacity-90"
-                }`}
+                  }`}
                 style={{
                   width: isActive ? "64px" : "40px",
                   height: isActive ? "64px" : "40px",
