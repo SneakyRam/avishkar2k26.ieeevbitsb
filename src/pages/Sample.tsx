@@ -5,7 +5,7 @@ import samplePPT from "@/assets/team/sample/SamplePPT.pptx";
 import sampleAbstractInd from "@/assets/team/sample/Sample Abstract individual.pdf";
 import sampleAbstractTeam from "@/assets/team/sample/Sample Abtract team.pdf";
 import problemStatement from "@/assets/team/sample/Avishkar 2k26 Problem statemen (1).pdf";
-import sampleVideo from "@/assets/team/sample/Sample Abstract Tutorial Video.mp4";
+import sampleVideo from "@/assets/Sample Abstract Tutorial Video.mp4";
 
 const btnClass = "inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#1C31D4] text-white text-sm font-medium transition-all duration-200 hover:bg-[#1C31D4] hover:text-white hover:shadow-md hover:scale-105 active:scale-95 group";
 

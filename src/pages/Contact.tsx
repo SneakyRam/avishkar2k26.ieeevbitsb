@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 
 
 const Contact = () => {
@@ -74,24 +75,24 @@ const Contact = () => {
             <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1 block">First name</label>
+                  <Label className="text-xs text-muted-foreground mb-1 block">First name</Label>
                   <Input name="firstName" placeholder="First name" required />
                 </div>
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1 block">Last name</label>
+                  <Label className="text-xs text-muted-foreground mb-1 block">Last name</Label>
                   <Input name="lastName" placeholder="Last name" />
                 </div>
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Email</label>
+                <Label className="text-xs text-muted-foreground mb-1 block">Email</Label>
                 <Input name="email" type="email" placeholder="Your email" required />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Phone number</label>
+                <Label className="text-xs text-muted-foreground mb-1 block">Phone number</Label>
                 <Input name="phone" placeholder="Phone number" />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Message</label>
+                <Label className="text-xs text-muted-foreground mb-1 block">Message</Label>
                 <Textarea name="message" placeholder="How can we help?" rows={4} required />
               </div>
               <Button className="w-full" type="submit" disabled={status === "loading"}>
