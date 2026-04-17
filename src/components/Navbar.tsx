@@ -14,7 +14,7 @@ const navLinks = [
   {
     to: "/resources", label: "More", children: [
       { to: "/resources", label: "Resources" },
-
+      { to: "/sample", label: "Sample" },
       { to: "/faqs", label: "FAQs" },
     ]
   },
