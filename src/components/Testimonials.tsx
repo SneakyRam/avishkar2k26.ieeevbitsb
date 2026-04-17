@@ -62,7 +62,7 @@ const testimonials = [
     text: "Being part of Avishkar 2K25 was a valuable experience that enriched both my skill set and academic outlook. The event provided an opportunity to enhance my presentation skills, develop critical thinking and communicate ideas with clarity. Working with my team strengthened my ability to work effectively together, while the competitive environment motivated me to perform at my best."
   },
   {
-    name: "Akshaay Saharsh",
+    name: "Akshay Saharsh",
     role: "Treasury",
     image: akshayTreasury,
     text: "Participating in Avishkar 2K25 has been a great experience, the event stands out for its focus on quick thinking, analytical reasoning and the ability to develop structured solutions to real-world problem statements under pressure. Securing a position among the Top 10 not only strengthened my confidence but also enhanced my critical thinking, teamwork and communication skills."

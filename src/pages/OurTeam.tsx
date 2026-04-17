@@ -55,48 +55,48 @@ interface Member {
 
 const members: Member[] = [
   // ── Marketing ──
-  { name: "Gokul",       role: "Marketing", image: gokulMarketing, insta: "https://www.instagram.com/gokulageera/", linkedin: "https://www.linkedin.com/in/gokul-ageera-0261a6383/" },
+  { name: "Gokul Ageera",       role: "Marketing", image: gokulMarketing, insta: "https://www.instagram.com/gokulageera/", linkedin: "https://www.linkedin.com/in/gokul-ageera-0261a6383/" },
   { name: "Hasini",      role: "Marketing", image: hasiniMarketing, insta: "https://www.instagram.com/_hasinivanumu_/", linkedin: "https://www.linkedin.com/in/hasini-vanumu-34187b402/" },
-  { name: "Sanjana",     role: "Marketing", image: sanjanaMarketing, insta: "https://www.instagram.com/sanjana._0905/", linkedin: "https://www.linkedin.com/in/sanjana-konka-306655402/" },
-  { name: "Deepthi",     role: "Marketing", image: deepthiMarketing, insta: "https://www.instagram.com/deepthi_shetty06/" },
-  { name: "Sai Krishna", role: "Marketing", image: krishnaMarketing, insta: "https://www.instagram.com/sai_krishna_1127/", linkedin: "https://in.linkedin.com/in/saikrishna-chinthamadaka-34178a3a1" },
+  { name: "Sanjana Konka",     role: "Marketing", image: sanjanaMarketing, insta: "https://www.instagram.com/sanjana._0905/", linkedin: "https://www.linkedin.com/in/sanjana-konka-306655402/" },
+  { name: "Deepthi Amudala",     role: "Marketing", image: deepthiMarketing, insta: "https://www.instagram.com/deepthi_shetty06/" },
+  { name: "C Sai Krishna", role: "Marketing", image: krishnaMarketing, insta: "https://www.instagram.com/sai_krishna_1127/", linkedin: "https://in.linkedin.com/in/saikrishna-chinthamadaka-34178a3a1" },
 
   // ── Documentation ──
-  { name: "Nethra",   role: "Documentation", image: nethraDoc, insta: "https://www.instagram.com/nethramaheshwaram/", linkedin: "https://www.linkedin.com/in/nethra-maheshwaram-5a0496402/" },
-  { name: "Sahithi",  role: "Documentation", image: sathiDoc, insta: "https://www.instagram.com/sahithi_dundigalla/", linkedin: "https://www.linkedin.com/in/sahithi-goud-748898360/" },
-  { name: "Snehitha", role: "Documentation", image: snehithaDoc, insta: "https://www.instagram.com/siri_123_b/", linkedin: "https://www.linkedin.com/in/snehitha-reddy-bashakarla-297645402/" },
-  { name: "Naveen",   role: "Documentation", image: naveenDoc, insta: "https://www.instagram.com/d.naveen_raj/", linkedin: "https://www.linkedin.com/in/naveen-raj-1aaa7b402/" },
-  { name: "Manoj",    role: "Documentation", image: manojDoc, insta: "https://www.instagram.com/b.manoj_1701/", linkedin: "https://www.linkedin.com/in/bachumanojkumar/" },
+  { name: "Maheshwaram Nethra",   role: "Documentation", image: nethraDoc, insta: "https://www.instagram.com/nethramaheshwaram/", linkedin: "https://www.linkedin.com/in/nethra-maheshwaram-5a0496402/" },
+  { name: "Dundigal Sahithi",  role: "Documentation", image: sathiDoc, insta: "https://www.instagram.com/sahithi_dundigalla/", linkedin: "https://www.linkedin.com/in/sahithi-goud-748898360/" },
+  { name: "Snehita", role: "Documentation", image: snehithaDoc, insta: "https://www.instagram.com/siri_123_b/", linkedin: "https://www.linkedin.com/in/snehitha-reddy-bashakarla-297645402/" },
+  { name: "Naveen Raj",   role: "Documentation", image: naveenDoc, insta: "https://www.instagram.com/d.naveen_raj/", linkedin: "https://www.linkedin.com/in/naveen-raj-1aaa7b402/" },
+  { name: "B Manoj Kumar",    role: "Documentation", image: manojDoc, insta: "https://www.instagram.com/b.manoj_1701/", linkedin: "https://www.linkedin.com/in/bachumanojkumar/" },
 
   // ── Poster Designing ──
-  { name: "Prashanth",    role: "Poster Designing", image: prashanthPD, insta: "https://www.instagram.com/prasshhhzanth/", linkedin: "https://www.linkedin.com/in/prashanthgarigaboina/" },
+  { name: "G Prashanth",    role: "Poster Designing", image: prashanthPD, insta: "https://www.instagram.com/prasshhhzanth/", linkedin: "https://www.linkedin.com/in/prashanthgarigaboina/" },
   { name: "Sreenidhi",    role: "Poster Designing", image: sreenithiPD, insta: "https://www.instagram.com/sreenidhi_01/", linkedin: "https://www.linkedin.com/in/sreenidhi-ananthula-b3b173403/" },
-  { name: "Likkitha",     role: "Poster Designing", image: likkithaPD, insta: "https://www.instagram.com/_likkithaa/", linkedin: "https://www.linkedin.com/in/likkitha-e-94a822369/" },
+  { name: "Likkitha E",     role: "Poster Designing", image: likkithaPD, insta: "https://www.instagram.com/_likkithaa/", linkedin: "https://www.linkedin.com/in/likkitha-e-94a822369/" },
   { name: "Dharmavardhan", role: "Poster Designing", image: dharmaPD, insta: "https://www.instagram.com/dharma_vardhan____/", linkedin: "https://www.linkedin.com/in/dharma-vardhan-904171403/" },
 
   // ── Hospitality ──
-  { name: "Kripa",     role: "Hospitality", image: kripaHos, insta: "https://www.instagram.com/kripa_.13/", linkedin: "https://www.linkedin.com/in/kripa-patel-1b399737a/" },
-  { name: "Madhur",    role: "Hospitality", image: madhurHos, insta: "https://www.instagram.com/not__madhur/", linkedin: "https://www.linkedin.com/in/sirigiri-madhur-abb78a384/" },
-  { name: "Manaswini", role: "Hospitality", image: manaswiniHos, insta: "https://www.instagram.com/mmanx_/", linkedin: "https://www.linkedin.com/in/manasvini-darbha/" },
-  { name: "Ruthvika",  role: "Hospitality", image: ruthvikaHos, insta: "https://www.instagram.com/rutvikaaa.30/", linkedin: "https://www.linkedin.com/in/rutvika-muriki-3a004132b/" },
-  { name: "Govind",    role: "Hospitality", image: govindHos, insta: "https://www.instagram.com/ganesh._.27_/", linkedin: "https://www.linkedin.com/in/govind-ganesh-yada-520915326/" },
+  { name: "Kripa Patel",     role: "Hospitality", image: kripaHos, insta: "https://www.instagram.com/kripa_.13/", linkedin: "https://www.linkedin.com/in/kripa-patel-1b399737a/" },
+  { name: "S Madhur",    role: "Hospitality", image: madhurHos, insta: "https://www.instagram.com/not__madhur/", linkedin: "https://www.linkedin.com/in/sirigiri-madhur-abb78a384/" },
+  { name: "Manaswini Darbha", role: "Hospitality", image: manaswiniHos, insta: "https://www.instagram.com/mmanx_/", linkedin: "https://www.linkedin.com/in/manasvini-darbha/" },
+  { name: "M Rutvika",  role: "Hospitality", image: ruthvikaHos, insta: "https://www.instagram.com/rutvikaaa.30/", linkedin: "https://www.linkedin.com/in/rutvika-muriki-3a004132b/" },
+  { name: "Y Govind Ganesh",    role: "Hospitality", image: govindHos, insta: "https://www.instagram.com/ganesh._.27_/", linkedin: "https://www.linkedin.com/in/govind-ganesh-yada-520915326/" },
 
   // ── Treasury ──
-  { name: "Akshay",   role: "Treasury", image: akshayTreasury, insta: "https://www.instagram.com/akshaysaharshgajula/", linkedin: "https://www.linkedin.com/in/akshay-saharsh-8522a53a1/" },
-  { name: "Faiz Ali", role: "Treasury", image: faizTreasury, insta: "https://www.instagram.com/faiz_ali/", linkedin: "https://in.linkedin.com/in/mohammed-faiz-ali-13b854402/" },
-  { name: "Rahul",    role: "Treasury", image: rahulTreasury, insta: "https://www.instagram.com/rahul__chary_07/", linkedin: "https://www.linkedin.com/in/rahul-kolloju-b4732438a/" },
-  { name: "Karthik",  role: "Treasury", image: karthikTreasury, insta: "https://www.instagram.com/karthik.__.200/", linkedin: "https://www.linkedin.com/in/ramavath-karthik-403235403/" },
+  { name: "Akshay Saharsh",   role: "Treasury", image: akshayTreasury, insta: "https://www.instagram.com/akshaysaharshgajula/", linkedin: "https://www.linkedin.com/in/akshay-saharsh-8522a53a1/" },
+  { name: "Mohammad Faiz Ali", role: "Treasury", image: faizTreasury, insta: "https://www.instagram.com/faiz_ali/", linkedin: "https://in.linkedin.com/in/mohammed-faiz-ali-13b854402/" },
+  { name: "K Rahul",    role: "Treasury", image: rahulTreasury, insta: "https://www.instagram.com/rahul__chary_07/", linkedin: "https://www.linkedin.com/in/rahul-kolloju-b4732438a/" },
+  { name: "Karthik Ramavath",  role: "Treasury", image: karthikTreasury, insta: "https://www.instagram.com/karthik.__.200/", linkedin: "https://www.linkedin.com/in/ramavath-karthik-403235403/" },
 
   // ── Web Designing ──
-  { name: "Jyothsna",        role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/", linkedin: "https://www.linkedin.com/in/jyothsna-kakarla-245b8a37a/" },
-  { name: "Ram Gopal",       role: "Web Designing", image: ramgopalWD, insta: "https://www.instagram.com/raai.gen/", linkedin: "https://www.linkedin.com/in/ram-gopal-163479280/" },
+  { name: "Jyothsna Kakarla",        role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/", linkedin: "https://www.linkedin.com/in/jyothsna-kakarla-245b8a37a/" },
+  { name: "G Ram Gopal",       role: "Web Designing", image: ramgopalWD, insta: "https://www.instagram.com/raai.gen/", linkedin: "https://www.linkedin.com/in/ram-gopal-163479280/" },
   { name: "Siddhu Srinivas", role: "Web Designing", image: sidduWD, insta: "https://www.instagram.com/itz_me_siddhu_6351/", linkedin: "https://www.linkedin.com/in/gajula-siddhu-srinivas-611439322/" },
 
   // ── Social Media Promotions ──
-  { name: "Karthikeya", role: "Social Media Promotions", image: karthikeyaSMP, insta: "https://www.instagram.com/karthikeyaganchiri/", linkedin: "https://www.linkedin.com/in/karthikeya-ganchiri-294a13330/" },
-  { name: "Sai Veer",   role: "Social Media Promotions", image: saiveerSMP, insta: "https://www.instagram.com/_.shutterbug_89/", linkedin: "https://www.linkedin.com/in/saiveer-pendkar-126415365/" },
-  { name: "Viswajit",   role: "Social Media Promotions", image: viswajitSMP, insta: "https://www.instagram.com/s.__.u.__.r.__.y.__.a/", linkedin: "https://www.linkedin.com/in/viswajit-reddy-7a0739402/" },
-  { name: "Keerthi",    role: "Social Media Promotions", image: bhavanaSMP, insta: "https://www.instagram.com/bhavanakeerthi.s/", linkedin: "https://www.linkedin.com/in/bhavana-keerthi-808381403/" },
+  { name: "G Karthikeya", role: "Social Media Promotions", image: karthikeyaSMP, insta: "https://www.instagram.com/karthikeyaganchiri/", linkedin: "https://www.linkedin.com/in/karthikeya-ganchiri-294a13330/" },
+  { name: "Saiveer Pendkar",   role: "Social Media Promotions", image: saiveerSMP, insta: "https://www.instagram.com/_.shutterbug_89/", linkedin: "https://www.linkedin.com/in/saiveer-pendkar-126415365/" },
+  { name: "Viswajith Reddy",   role: "Social Media Promotions", image: viswajitSMP, insta: "https://www.instagram.com/s.__.u.__.r.__.y.__.a/", linkedin: "https://www.linkedin.com/in/viswajit-reddy-7a0739402/" },
+  { name: "Bhavana Keerthi",    role: "Social Media Promotions", image: bhavanaSMP, insta: "https://www.instagram.com/bhavanakeerthi.s/", linkedin: "https://www.linkedin.com/in/bhavana-keerthi-808381403/" },
 ];
 
 const OurTeam = () => (
