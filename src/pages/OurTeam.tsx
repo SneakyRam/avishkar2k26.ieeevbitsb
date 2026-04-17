@@ -144,7 +144,7 @@ const OurTeam = () => (
                 </a>
               </div>
             </div>
-            <div className="p-4 text-center">
+            <div className="p-4 text-center bg-slate-50 border-t border-slate-100">
               <h3 className="font-bold text-foreground">{m.name}</h3>
               <p className="text-sm text-muted-foreground">{m.role}</p>
             </div>

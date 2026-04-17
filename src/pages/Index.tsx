@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Layout from "@/components/Layout";
 import CountdownTimer from "@/components/CountdownTimer";
@@ -11,6 +12,14 @@ import avkLogo from "@/assets/avk_logo.png";
 /* -------------------- Page -------------------- */
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [textIndex, setTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Layout>
@@ -36,21 +45,56 @@ const Index = () => {
 
           <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto pointer-events-auto" style={{ gap: '0' }}>
 
-            {/* Heading */}
-            <h1
-              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight"
-              style={{ fontFamily: "'Times New Roman', Times, serif", animationDelay: '100ms', animationFillMode: 'both', marginBottom: '0.5rem' }}
-            >
-              AVISHKAR <span className="sm:ml-2">2K26</span>
-            </h1>
-
-            {/* Engineering Inventions Subtitle */}
-            <p
-              className="font-body text-lg sm:text-xl md:text-2xl text-white font-light tracking-[0.25em] drop-shadow-lg animate-fadeUp"
-              style={{ animationDelay: '150ms', animationFillMode: 'both', marginTop: '0.75rem', marginBottom: '1rem' }}
-            >
-              Engineering Inventions
-            </p>
+            {/* Alternating Main Title & Subtitle */}
+            <div className="min-h-[160px] sm:min-h-[200px] md:min-h-[220px] flex items-center justify-center w-full">
+              <AnimatePresence mode="wait">
+                {textIndex === 0 ? (
+                  <motion.div
+                    key="frame-1"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="flex flex-col items-center justify-center w-full"
+                  >
+                    <h1
+                      className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl leading-tight"
+                      style={{ fontFamily: "'Times New Roman', Times, serif", marginBottom: '0.5rem' }}
+                    >
+                      AVISHKAR <span className="sm:ml-2">2K26</span>
+                    </h1>
+                    <p
+                      className="font-body text-lg sm:text-xl md:text-2xl text-white font-light tracking-[0.25em] drop-shadow-lg"
+                      style={{ marginTop: '0.75rem', marginBottom: '1rem' }}
+                    >
+                      Engineering Inventions
+                    </p>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="frame-2"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="flex flex-col items-center justify-center w-full"
+                  >
+                    <h1
+                      className="text-[1.3rem] min-[375px]:text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg leading-tight px-4 whitespace-nowrap"
+                      style={{ fontFamily: "'Inter', sans-serif", marginBottom: '0.5rem' }}
+                    >
+                      The Most Awaited Event is Back
+                    </h1>
+                    <p
+                      className="font-body text-sm sm:text-base md:text-xl text-white font-bold tracking-widest uppercase"
+                      style={{ marginTop: '0.75rem', marginBottom: '1rem' }}
+                    >
+                      Unleash Your Potential
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             {/* Subheading */}
             <p
@@ -66,7 +110,7 @@ const Index = () => {
               style={{ animationDelay: '300ms', animationFillMode: 'both', marginTop: '0.5rem' }}
             >
               <a
-                href="https://bit.ly/Avishkar2K26"
+                href="https://forms.gle/teGdTF9WeQ69szVT6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body px-10 sm:px-14 py-3 sm:py-3.5 rounded-full text-[#1a1a2e] font-bold tracking-[0.2em] text-xs sm:text-sm transition-all duration-300 hover:scale-105 text-center bg-white hover:bg-white/90"
