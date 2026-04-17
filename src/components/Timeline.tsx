@@ -2,12 +2,10 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
 
 const timelineEvents = [
-  { date: "March 6", title: "Registration Opens", side: "left" },
-  { date: "March 17", title: "Abstract Submission Deadline", side: "right" },
-  { date: "March 10", title: "PPT Submission Deadline", side: "left" },
-  { date: "March 11", title: "Preliminary Round", side: "right" },
-  { date: "March 10", title: "Results Announcement", side: "left" },
-  { date: "March 8", title: "Final Round", side: "right" },
+  { date: "17th April, 2026", title: "Registration Deadline", side: "left" },
+  { date: "18th April, 2026", title: "Abstract Submission Deadline", side: "right" },
+  { date: "19th April, 2026", title: "PPT Submission Deadline", side: "left" },
+  { date: "21st - 22nd April, 2026", title: "Event Conducted", side: "right" },
 ];
 
 const TimelineNode = ({
