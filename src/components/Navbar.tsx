@@ -59,12 +59,12 @@ const Navbar = () => {
           <img
             src={avkLogo}
             alt="Avishkar Logo"
-            className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 translate-y-1 md:translate-y-2"
+            className="h-14 sm:h-18 md:h-24 w-auto object-contain shrink-0 translate-y-2 md:translate-y-3"
           />
           <img
             src={ieeeLogo}
             alt="IEEE Logo"
-            className="h-8 sm:h-10 md:h-12 w-auto object-contain shrink-0"
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0"
           />
         </Link>
 
