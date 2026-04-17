@@ -46,7 +46,7 @@ const RingUnit = ({ value, label, max, accentColor = "#000000" }: RingUnitProps)
   return (
     <div className="flex flex-col items-center gap-2 sm:gap-4 select-none">
       {/* Outer glow wrapper */}
-      <div className="relative w-[60px] sm:w-[90px] md:w-[130px] aspect-square">
+      <div className="relative w-[74px] sm:w-[90px] md:w-[130px] aspect-square">
         {/* Glow behind the ring */}
         <div
           className="absolute inset-0 rounded-full opacity-20 blur-md pointer-events-none"
@@ -92,7 +92,7 @@ const RingUnit = ({ value, label, max, accentColor = "#000000" }: RingUnitProps)
         >
           {/* Number */}
           <span
-            className="font-bold text-black leading-none text-lg sm:text-2xl md:text-[2.2rem]"
+            className="font-bold text-black leading-none text-xl sm:text-2xl md:text-[2.2rem]"
             style={{
               fontVariantNumeric: "tabular-nums",
               letterSpacing: "-0.02em",
@@ -105,7 +105,7 @@ const RingUnit = ({ value, label, max, accentColor = "#000000" }: RingUnitProps)
 
       {/* Label */}
       <span
-        className="text-[9px] sm:text-[11px] uppercase font-semibold tracking-[0.2em] sm:tracking-[0.3em]"
+        className="text-[10px] sm:text-[11px] uppercase font-semibold tracking-[0.15em] sm:tracking-[0.3em]"
         style={{ color: "rgba(27, 54, 93, 0.7)" }}
       >
         {label}
@@ -116,9 +116,9 @@ const RingUnit = ({ value, label, max, accentColor = "#000000" }: RingUnitProps)
 
 // ─── Separator dot ─────────────────────────────────────────────────────────
 const Separator = () => (
-  <div className="flex flex-col items-center justify-center gap-1 sm:gap-2 pb-5 sm:pb-8 self-center">
-    <span className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-black/20" />
-    <span className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-black/20" />
+  <div className="flex flex-col items-center justify-center gap-1.5 sm:gap-2 pb-6 sm:pb-8 self-center">
+    <span className="w-1 h-1 sm:w-1 sm:h-1 rounded-full bg-black/20" />
+    <span className="w-1 h-1 sm:w-1 sm:h-1 rounded-full bg-black/20" />
   </div>
 );
 
@@ -137,7 +137,7 @@ const CountdownTimer = () => {
         </div>
 
         {/* Rings row */}
-        <div className="flex items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap sm:flex-wrap">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-nowrap sm:flex-wrap">
           <RingUnit value={days}    label="Days"    max={365} />
           <Separator />
           <RingUnit value={hours}   label="Hours"   max={24}  />
