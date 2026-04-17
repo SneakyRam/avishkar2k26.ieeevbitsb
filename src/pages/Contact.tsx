@@ -4,19 +4,16 @@ import Layout from "@/components/Layout";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+
 
 const Contact = () => {
-  const [agreed, setAgreed] = useState(false);
+
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!agreed) {
-      alert("Please agree to our privacy policy.");
-      return;
-    }
+
     if (!formRef.current) return;
 
     setStatus("loading");
@@ -26,16 +23,16 @@ const Contact = () => {
       formRef.current,
       "cLBW5iWGIjSf4pdSy" // Replace with your EmailJS Public Key
     )
-    .then(() => {
-      setStatus("success");
-      formRef.current?.reset();
-      setAgreed(false);
-      setTimeout(() => setStatus("idle"), 5000);
-    })
-    .catch((error) => {
-      console.error("EmailJS Error:", error);
-      setStatus("error");
-    });
+      .then(() => {
+        setStatus("success");
+        formRef.current?.reset();
+
+        setTimeout(() => setStatus("idle"), 5000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        setStatus("error");
+      });
   };
 
   return (
@@ -102,10 +99,7 @@ const Contact = () => {
               </Button>
               {status === "success" && <p className="text-green-500 text-sm text-center">Message sent successfully!</p>}
               {status === "error" && <p className="text-red-500 text-sm text-center">Failed to send message. Please try again.</p>}
-              <div className="flex items-center gap-2">
-                <Checkbox checked={agreed} onCheckedChange={(v) => setAgreed(!!v)} required />
-                <span className="text-xs text-muted-foreground">You agree to our friendly privacy policy.</span>
-              </div>
+
             </form>
           </div>
         </div>

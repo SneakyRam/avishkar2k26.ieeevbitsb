@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import CountdownTimer from "@/components/CountdownTimer";
 import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
-import heroBg from "@/assets/hero-bg-exact.jpg";
+import heroBg from "@/assets/hero-bg-attached.jpg";
 import avkLogo from "@/assets/avk_logo.png";
 
 /* -------------------- Page -------------------- */
@@ -37,23 +37,23 @@ const Index = () => {
           <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto pointer-events-auto" style={{ gap: '0' }}>
 
             {/* Heading */}
-            <h1 
-              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight" 
+            <h1
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight drop-shadow-2xl animate-fadeUp leading-tight"
               style={{ fontFamily: "'Times New Roman', Times, serif", animationDelay: '100ms', animationFillMode: 'both', marginBottom: '0.5rem' }}
             >
               AVISHKAR <span className="sm:ml-2">2K26</span>
             </h1>
 
             {/* Engineering Inventions Subtitle */}
-            <p 
-              className="font-body text-lg sm:text-xl md:text-2xl text-blue-100/70 font-light tracking-[0.25em] drop-shadow-lg animate-fadeUp"
+            <p
+              className="font-body text-lg sm:text-xl md:text-2xl text-white font-light tracking-[0.25em] drop-shadow-lg animate-fadeUp"
               style={{ animationDelay: '150ms', animationFillMode: 'both', marginTop: '0.75rem', marginBottom: '1rem' }}
             >
               Engineering Inventions
             </p>
 
             {/* Subheading */}
-            <p 
+            <p
               className="font-body text-sm sm:text-base md:text-xl text-white/90 max-w-2xl font-semibold tracking-wide drop-shadow-lg px-4 animate-fadeUp leading-relaxed"
               style={{ animationDelay: '200ms', animationFillMode: 'both', marginBottom: '2rem' }}
             >
@@ -69,10 +69,9 @@ const Index = () => {
                 href="https://bit.ly/Avishkar2K26"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-body px-10 sm:px-14 py-3 sm:py-3.5 rounded-full text-[#1a1a2e] font-bold tracking-[0.2em] text-xs sm:text-sm transition-all duration-300 hover:scale-105 text-center border border-white/30"
+                className="font-body px-10 sm:px-14 py-3 sm:py-3.5 rounded-full text-[#1a1a2e] font-bold tracking-[0.2em] text-xs sm:text-sm transition-all duration-300 hover:scale-105 text-center bg-white hover:bg-white/90"
                 style={{
-                  background: 'linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 50%, #d4d4d4 100%)',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.5)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
                 }}
               >
                 REGISTER
@@ -99,7 +98,7 @@ const Index = () => {
               className="w-[280px] sm:w-[400px] md:w-[450px] max-w-none object-contain select-none"
             />
           </div>
-          
+
           <p className="font-body relative z-10 text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-justify px-2">
             Avishkar, the flagship event of IEEE - VBIT SB, is a Technical Paper Presentation competition held exclusively for the freshmen of VBIT. In the year 2011, Avishkar was awarded the esteemed 'Darrel Chong Gold Student Activity Award'. This year marks the 15th edition of the most vibrant event with a new approach to pave an ideal path for students to enhance their technical cognizance and continue mastery in advanced technologies.
           </p>
