@@ -26,7 +26,7 @@ import manojDoc from "@/assets/team/documentation/MANOJ - DOC.jpeg";
 /* -------------------- Data -------------------- */
 const testimonials = [
   {
-    name: "Siddhu Srinivas",
+    name: "Sreenidhi",
     role: "Poster Designing",
     image: sreenithiPD,
     text: "Participating in Avishkar 2K25 proved to be a valuable experience, significantly enhancing my presentation skills and building confidence in articulating ideas effectively. Proficiency was developed in the systematic preparation and structured delivery of a technical abstract, while strong teamwork was demonstrated through active contributions to both abstract development and PowerPoint presentation design. As an inaugural event during the first year of study, it held particular significance. Furthermore, involvement with the organizing team provided practical insight into the principles of event management."
