@@ -14,7 +14,7 @@ const TimelineNode = ({
   totalItems,
   progress,
 }: {
-  evt: any;
+  evt: { date: string; title: string; side: string };
   i: number;
   totalItems: number;
   progress: MotionValue<number>;

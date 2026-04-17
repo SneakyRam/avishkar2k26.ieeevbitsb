@@ -251,7 +251,7 @@ const Testimonials = () => {
     >
       {/* ── Heading ── */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4">
-        <h2 className="section-title text-white">Testimonials</h2>
+        <h2 className="section-title text-white before:bg-white after:bg-white">Testimonials</h2>
       </div>
 
       {/* ── Dot grids ── */}

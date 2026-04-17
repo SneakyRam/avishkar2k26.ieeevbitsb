@@ -10,7 +10,7 @@ import Gallery from "./pages/Gallery";
 import OurTeam from "./pages/OurTeam";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
-import Sample from "./pages/Sample";
+
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/team" element={<OurTeam />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/sample" element={<Sample />} />
+
           <Route path="/resources" element={<Resources />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Avishkar 2K26
 
-TODO: Document your project here
+The Flagship Technical Paper Presentation Competition of IEEE VBIT SB.
