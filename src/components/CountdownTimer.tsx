@@ -127,10 +127,10 @@ const CountdownTimer = () => {
   const { days, hours, minutes, seconds } = useCountdown();
 
   return (
-    <section className="relative py-16 sm:py-24 overflow-hidden bg-transparent">
+    <section className="relative py-8 sm:py-12 overflow-hidden bg-transparent">
       <div className="relative z-10 max-w-5xl mx-auto px-2 sm:px-4 text-center">
         {/* Heading */}
-        <div className="mb-12 sm:mb-16 w-full flex justify-center">
+        <div className="w-full flex justify-center">
           <h2 className="section-title">
             Event Commences in
           </h2>
