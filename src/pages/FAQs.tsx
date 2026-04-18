@@ -7,18 +7,16 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "When and where will Avishkar 2K26 be conducted?", a: "Avishkar 2K26 will be conducted on 12th April, 2026 and 13th April, 2026 at Vignana Bharathi Institute of Technology." },
-  { q: "Who can participate in Avishkar 2K26?", a: "All first-year students of VBIT are eligible to participate." },
-  { q: "Is it an individual or team event?", a: "Avishkar supports both individual and team participation." },
-  { q: "What is the format of the competition?", a: "It consists of two rounds: Preliminary Round and Final Round." },
-  { q: "What are the prizes?", a: "Winners will be awarded mementos and certificates." },
-  { q: "How do I register?", a: "You can register through the registration link provided on the website." },
-  { q: "What is the deadline for abstract submission?", a: "Please check the timeline section on the home page for deadlines." },
-  { q: "Can I change my problem statement after submission?", a: "No, changes are not allowed after submission." },
-  { q: "What format should the abstract be in?", a: "The abstract must be in .docx format following the specified guidelines." },
-  { q: "Who should I contact for queries?", a: "Please reach out through the contact page." },
-  { q: "Is there a registration fee?", a: "Details about registration fees will be shared during the registration process." },
-  { q: "What domains are available for the presentation?", a: "Multiple domains are available. Check the problem statements for details." },
+  { q: "What is Avishkar?", a: "Avishkar is the flagship event of IEEE - VBIT SB. It is a Technical Paper Presentation competition which provides Freshmen of VBIT an opportunity to share their ideas and improve their presentation skills." },
+  { q: "On what date and at which venue will Avishkar 2K26 be conducted?", a: "Avishkar 2K26 will be conducted on 21st April, 2026 and 22nd April, 2026 at Vignana Bharathi Institute of Technology." },
+  { q: "How is the Problem statement assigned?", a: "Problem statement is provided in the registration confirmation mail and is available on the Avishkar 2K26 website." },
+  { q: "Can I change the topic after I have submitted the Abstract?", a: "Yes, you can change your topic by submitting a new abstract." },
+  { q: "Can a student from another branch be my teammate?", a: "You can choose anyone from first year to be your teammate." },
+  { q: "Can I participate as an individual?", a: "Yes, you can participate as an individual or in a team of two." },
+  { q: "What should I do if I was absent for Student Development Program?", a: "The sample Abstract and PPT will be provided in the Avishkar 2K26 website if you did not attend the Student Development Program." },
+  { q: "What is the registration fee for Avishkar 2K26?", a: "There is no registration fee for Avishkar 2K26." },
+  { q: "Can I submit more than one Problem statement?", a: "No, only one Problem statement is allowed per individual or team." },
+  { q: "Whom do we contact in case of any queries?", a: "For queries, contact:\nSai Krishna: 9032348479\nGokul: 7207232672" },
 ];
 
 const FAQs = () => (
@@ -39,7 +37,7 @@ const FAQs = () => (
               <AccordionTrigger className="text-sm sm:text-base text-foreground font-medium hover:no-underline transition-colors duration-300 data-[state=open]:text-primary">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground text-justify">
+              <AccordionContent className="text-sm text-muted-foreground text-justify whitespace-pre-line">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
