@@ -9,7 +9,7 @@ import sanjanaMarketing from "@/assets/team/marketing/SANJANA - MARKETING.jpeg";
 import sathiDoc from "@/assets/team/documentation/SAHTHI - DOC.jpeg";
 import prashanthPD from "@/assets/team/poster-designing/PRASHANTH - PD.jpeg";
 import sreenithiPD from "@/assets/team/poster-designing/SREENIDHI - PD.jpeg";
-import likkithaPD from "@/assets/team/poster-designing/LIKKITHA - PD.jpeg";
+import likkithaPD from "@/assets/team/poster-designing/likkitha2.jpeg";
 import kripaHos from "@/assets/team/hospitality/KRIPA - HOS.jpeg";
 import manaswiniHos from "@/assets/team/hospitality/MANASWINI - HOS.jpeg";
 import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
