@@ -26,7 +26,7 @@ import kripaHos from "@/assets/team/hospitality/KRIPA - HOS.jpeg";
 import madhurHos from "@/assets/team/hospitality/MADHUR - HOS.jpeg";
 import manaswiniHos from "@/assets/team/hospitality/MANASWINI - HOS.jpeg";
 import ruthvikaHos from "@/assets/team/hospitality/RUTHVIKA - HOS.jpeg";
-import govindHos from "@/assets/team/hospitality/GOVIND GANESH - HOS.jpeg";
+import govindHos from "@/assets/team/hospitality/Y GOVIND GANESH.jpg";
 
 // ── Treasury ──
 import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
