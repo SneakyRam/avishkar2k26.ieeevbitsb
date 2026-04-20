@@ -5,7 +5,7 @@ import { Instagram, Linkedin } from "lucide-react";
 import gokulMarketing from "@/assets/team/marketing/GOKUL - MARKETING.jpeg";
 import hasiniMarketing from "@/assets/team/marketing/HASINI - MARKETING.jpeg";
 import sanjanaMarketing from "@/assets/team/marketing/SANJANA - MARKETING.jpeg";
-import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpg";
+import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.png";
 import krishnaMarketing from "@/assets/team/marketing/KRISHNA - TREASURY.jpeg";
 
 // ── Documentation ──
@@ -30,7 +30,7 @@ import govindHos from "@/assets/team/hospitality/Y GOVIND GANESH.jpg";
 
 // ── Treasury ──
 import akshayTreasury from "@/assets/team/treasury/AKSHAY - TREASURY.jpeg";
-import karthikTreasury from "@/assets/team/treasury/karthik.jpeg";
+import karthikTreasury from "@/assets/team/treasury/KARTHIK - TREASURY.jpg";
 import faizTreasury from "@/assets/team/treasury/FAIZ ALI - TREASURY.jpeg";
 import rahulTreasury from "@/assets/team/treasury/RAHUL - TREASURY.jpeg";
 
@@ -43,7 +43,7 @@ import sidduWD from "@/assets/team/web-designing/SIDDU SRINIVAS - WEB.jpeg";
 import karthikeyaSMP from "@/assets/team/social-media-promotions/KARTHIKEYA - SMP.jpeg";
 import saiveerSMP from "@/assets/team/social-media-promotions/SAI VEER - SMP.jpeg";
 import viswajitSMP from "@/assets/team/social-media-promotions/VISWAJIT - SMP.jpeg";
-import bhavanaSMP from "@/assets/team/social-media-promotions/BHAVANA - SMP.jpeg";
+import bhavanaSMP from "@/assets/team/social-media-promotions/BHAVANA - SMP.jpg";
 
 interface Member {
   name: string;
@@ -91,7 +91,7 @@ const members: Member[] = [
   // ── Web Designing ──
   { name: "Jyothsna Kakarla",        role: "Web Designing", image: jyothsnaWD, insta: "https://www.instagram.com/jyothsna._30/", linkedin: "https://www.linkedin.com/in/jyothsna-kakarla-245b8a37a/" },
   { name: "G Ram Gopal",       role: "Web Designing", image: ramgopalWD, insta: "https://www.instagram.com/raai.gen/", linkedin: "https://www.linkedin.com/in/ram-gopal-163479280/" },
-  { name: "Siddhu Srinivas", role: "Web Designing", image: sidduWD, insta: "https://www.instagram.com/itz_me_siddhu_6351/", linkedin: "https://www.linkedin.com/in/gajula-siddhu-srinivas-611439322/" },
+  { name: "Siddhu Srinivas", role: "Web Designing", image: sidduWD, insta: "https://www.instagram.com/itz_me_siddhu_6351/", linkedin: "https://www.linkedin.com/in/gajula-siddhu-srinivas-611439322/", imageClass: "scale-110 object-top" },
 
   // ── Social Media Promotions ──
   { name: "G Karthikeya", role: "Social Media Promotions", image: karthikeyaSMP, insta: "https://www.instagram.com/karthikeyaganchiri/", linkedin: "https://www.linkedin.com/in/karthikeya-ganchiri-294a13330/" },
