@@ -18,7 +18,7 @@ import jyothsnaWD from "@/assets/team/web-designing/JYOTHSNA - WD.jpeg";
 import ramgopalWD from "@/assets/team/web-designing/RAM GOPAL - WD.jpeg";
 import karthikeyaSMP from "@/assets/team/social-media-promotions/KARTHIKEYA - SMP.jpeg";
 import saiveerSMP from "@/assets/team/social-media-promotions/SAI VEER - SMP.jpeg";
-import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpeg";
+import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpg";
 import bhavanaSMP from "@/assets/team/social-media-promotions/BHAVANA - SMP.jpeg";
 import krishnaMarketing from "@/assets/team/marketing/KRISHNA - TREASURY.jpeg";
 import manojDoc from "@/assets/team/documentation/MANOJ - DOC.jpeg";

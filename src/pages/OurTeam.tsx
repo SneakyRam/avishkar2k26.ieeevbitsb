@@ -5,7 +5,7 @@ import { Instagram, Linkedin } from "lucide-react";
 import gokulMarketing from "@/assets/team/marketing/GOKUL - MARKETING.jpeg";
 import hasiniMarketing from "@/assets/team/marketing/HASINI - MARKETING.jpeg";
 import sanjanaMarketing from "@/assets/team/marketing/SANJANA - MARKETING.jpeg";
-import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpeg";
+import deepthiMarketing from "@/assets/team/marketing/DEEPTHI - MARKETING.jpg";
 import krishnaMarketing from "@/assets/team/marketing/KRISHNA - TREASURY.jpeg";
 
 // ── Documentation ──
